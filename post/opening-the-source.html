@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/main.css?v=79">
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/fonts.css?v=79">
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/TFS2_Icons.css?v=79">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="../npm/%40mdi/font%405.9.55/css/materialdesignicons.min.css">
+<link href="../css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="../engine/applications/blog/templates/tfs2/assets/scripts/parallax_background.js?v=79" charset="utf-8"></script>
+<script src="../engine/applications/blog/templates/tfs2/assets/scripts/popup_preview.js?v=79" charset="utf-8"></script>
+<script src="../engine/core/templates/default/assets/scripts/API.js?v=79" charset="utf-8"></script>
+<script src="../engine/core/templates/default/assets/scripts/AjaxDocLoad.js?v=79" charset="utf-8"></script>
+
+<script type="text/javascript" src="../npm/lozad/dist/lozad.min.js"></script>
+
+<script async="" src="../gtag/js?id=G-5J0ZFCS7K3"></script>
+<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-5J0ZFCS7K3');
+	</script>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2416877417515654" crossorigin="anonymous"></script>
+
+<title>Opening The Source — TF: Source 2</title>
+<meta property="og:title" content="Opening The Source — TF: Source 2">
+<meta property="og:site_name" content="TF: Source 2">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/post/opening-the-source">
+<meta property="og:image" content="https://files.moonlydays.com/sbox_0001.png">
+<meta property="og:description" content="In today's blog-post, we would like to update you about the state of the Team Fortress: Source 2 project, what has happened over the past few months, what we have planned for the future and what you should expect from the project.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:src" content="https://files.moonlydays.com/sbox_0001.png">
+<meta name="twitter:site" content="@TeamFortressS2">
+<meta name="twitter:title" content="Opening The Source — TF: Source 2">
+<meta name="twitter:description" content="In today's blog-post, we would like to update you about the state of the Team Fortress: Source 2 project, what has happened over the past few months, what we have planned for the future and what you should expect from the project.">
+
+<link rel="apple-touch-icon" sizes="180x180" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/apple-touch-icon.png?v=79">
+<link rel="icon" type="image/png" sizes="32x32" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon-32x32.png?v=79">
+<link rel="icon" type="image/png" sizes="16x16" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon-16x16.png?v=79">
+<link rel="manifest" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/site.webmanifest?v=79">
+<link rel="mask-icon" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/safari-pinned-tab.svg?v=79" color="#ea9b26">
+<link rel="shortcut icon" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon.ico?v=79">
+<meta name="theme-color" content="#ea9b26">
+<meta name="msapplication-TileColor" content="#ea9b26">
+<meta name="msapplication-config" content="/engine/applications/blog/templates/tfs2/assets/images/favicon/browserconfig.xml?v=79">
+</head>
+<body>
+<div id="popup_preview">
+<div class="media_container"></div>
+<div class="caption_container"></div>
+</div>
+<div id="background"></div>
+<div id="core">
+<header>
+<div class="topbar">
+<div class="topbar_header_container">
+<div class="container flex header_wrapper">
+<div class="header_rect_logotype">
+<a href="../index.htm">
+<img src="../engine/applications/blog/templates/tfs2/assets/images/tfs2_rect_logotype.png?v=79" alt="Team Fortress: Source 2">
+</a>
+</div>
+<div class="topbar_center_navigation topbar_header_container topbar_navigation">
+<ul>
+<a href="../news.html">
+<li> <i class="tfs2i icon-blog"></i> News</li>
+</a>
+<a href="../about.html">
+<li> <i class="tfs2i icon-about"></i> About</li>
+</a>
+<a href="../team.html">
+<li> <i class="tfs2i icon-team"></i> Team</li>
+</a>
+</ul>
+</div>
+<div class="topbar_hamburger topbar_header_container" onclick="document.querySelector('#hamburger_menu').classList.toggle('open')">
+<i class="mdi mdi-menu"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="hamburger_menu topbar_navigation" id="hamburger_menu">
+<ul>
+<a href="../news.html">
+<li> <i class="tfs2i icon-blog"></i> Blog</li>
+</a>
+<a href="../about.html">
+<li> <i class="tfs2i icon-about"></i> About</li>
+</a>
+<a href="../team.html">
+<li> <i class="tfs2i icon-team"></i> Team</li>
+</a>
+</ul>
+</div>
+</header>
+
+<div id="site_content">
+<div class="banner">
+<div class="container">
+<div class="banner_title">Opening The Source</div>
+<div class="banner_tags">
+<div class="post_tag"><i class="mdi mdi-clock"></i> Sunday, Nov 20th, 2022</div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/page_post.css?v=79">
+<style>
+    #background {
+        background-image: url(../sbox_0001.png);
+    }
+</style>
+
+<div class="page">
+<div class="separator"></div>
+<div class="content">
+<div class="container">
+<div class="section">
+<div class="section_content">
+<div class="section_static">
+<section id="Introduction">
+<div class="post_section popuppreview">
+<div class="post_section_title">Introduction <a href="#Introduction" onclick="CopyText('https://tfsource2.com/post/opening-the-source#Introduction')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Amper Team</div>
+</div>
+<p>In today's blog-post, we would like to update you about the state of the Team Fortress: Source 2 project, what has happened over the past few months, what we have planned for the future and what you should expect from the project.</p>
+</div>
+</section><section id="Slowed-down_Development">
+<div class="post_section popuppreview">
+<div class="post_section_title">Slowed-down Development <a href="#Slowed-down_Development" onclick="CopyText('https://tfsource2.com/post/opening-the-source#Slowed-down_Development')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> KAYA</div>
+</div>
+<p>If you’ve been lurking on our <a href='https://discord.gg/tMnTsUsVjP'>Discord</a>, following us on <a href='https://twitter.com/TeamFortressS2'>Twitter</a> or even playing TF: Source 2 while being one of the lucky s&box key holders, you might have noticed updates about the project became less and less frequent since the end of the summer, we would like to take our time to explain why this is.</p>
+<p>The first reason for this slowed-down development is college, uni, school & work coming back in our lives. As you may already know, we only work on this project in our free time, and since we all began getting back into college or some of us going back to work, we haven’t been able to find much time and motivation since the end of the summer and I think most of us can relate to that, finding time to work on a passion project is tough while balancing with your professional life.</p>
+<p>After that, the second major reason is about the overall workflow on s&box over the past few months. It is not, to say the least, the best way to develop a full game on an engine that is constantly evolving everyday, breaking or changing in either a better or a worse way, it is overall a very unstable experience that hasn’t been driving our motivation forward (as much as on the programming side as on the artistic side of the project).</p>
+<p>The last reason is that we have another project starting internally at Amper, that you may or may not ever see, it all depends where it goes, all we can say is that we’re currently experimenting with a few ideas.</p>
+</div>
+</section><section id="Opening_the_Source">
+<div class="post_section popuppreview">
+<div class="post_section_title">Opening the Source <a href="#Opening_the_Source" onclick="CopyText('https://tfsource2.com/post/opening-the-source#Opening_the_Source')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> KAYA</div>
+</div>
+<p>The ultimate goal of the project has always been to create a foundation for people to build and iterate upon a new Team Fortress experience in s&box, we have finally come to that time where we want to open source the project to you.</p>
+<p>You are now able to contribute to our project directly on our public <a href='https://github.com/AmperSoftware/TF-Source-2'>GitHub repository</a> by opening <a href='https://github.com/AmperSoftware/TF-Source-2/pulls'>pull requests</a>, or you can totally <a href='https://github.com/AmperSoftware/TF-Source-2/fork'>branch out</a> and create your own Team Fortress gamemode on S&Box.</p>
+<p>We would have liked to release this foundation in a more polished and finished state, but as forementioned, we are struggling to find enough time to fully finish it. We held a meeting internally at Amper and decided it would be better to give the keys earlier for everyone to move forward and start iterating on our base.</p>
+<p>This is a saner approach for the project, and the best outcome we could think of instead of letting the project sink in a development-hell where nothing would happen for months, letting people eager to work on the project outside of the Amper development team finally get their hands on it and contribute.</p>
+</div>
+</section><section id="Whats_Next">
+<div class="post_section popuppreview">
+<div class="post_section_title">What’s Next <a href="#Whats_Next" onclick="CopyText('https://tfsource2.com/post/opening-the-source#Whats_Next')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> KAYA</div>
+</div>
+<p>The open sourcing of TF: Source 2 doesn’t mean Amper is “ditching” the project by any means, we will still be supervising and contributing to the project as we used to before, but now we will be reviewing your pull requests before getting merged into our new public repository.</p>
+<p>We are also providing support on our official <a href='https://discord.gg/tMnTsUsVjP'>Discord community</a>, featuring many development channels where you can discuss with us and the other people contributing to the project, ask for help, or just overall find mates to play with on s&box.</p>
+<p>If you’re a programmer and interested in helping us out, find out how to contribute to the Team Fortress: Source 2 project by following <a href='https://github.com/AmperSoftware/TF-Source-2#readme'>this guide</a> on our new public <a href='https://github.com/AmperSoftware/TF-Source-2'>GitHub repository</a>. It'll cover everything you need to know!</p>
+<p>We are looking forward to your first contributions or creations with our foundation!</p>
+<p><i>PS: Mapping assets will still be closed source, as we want to avoid distributing licensed assets from Valve. There are plenty of guides around the internet on how to port Source assets to Source 2, Amper will not be providing official support for those.</i></p>
+</div>
+</section>
+<div>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Opening The Source" data-url="https://tfsource2.com/post/opening-the-source" data-hashtags="tfs2" data-show-count="false">Tweet</a>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function CopyText(text) {
+        if (!navigator.clipboard) {
+            fallbackCopyTextToClipboard(text);
+            return;
+        }
+        navigator.clipboard.writeText(text).then(function () {
+            console.log('Async: Copying to clipboard was successful!');
+        }, function (err) {
+            console.error('Async: Could not copy text: ', err);
+        });
+    }
+
+    function fallbackCopyTextToClipboard(text) {
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+
+        // Avoid scrolling to bottom
+        textArea.style.top = "0";
+        textArea.style.left = "0";
+        textArea.style.position = "fixed";
+
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'successful' : 'unsuccessful';
+            console.log('Fallback: Copying text command was ' + msg);
+        } catch (err) {
+            console.error('Fallback: Oops, unable to copy', err);
+        }
+
+        document.body.removeChild(textArea);
+    }
+</script>
+</div>
+<footer>
+<a href="https://twitter.com/AmperSoftware" target="_blank">
+<div class="footer_logotype"><img src="../engine/applications/blog/templates/tfs2/assets/images/amper_logotype.svg?v=79" alt="Amper Software"></div>
+</a>
+<div class="footer_copyright">&copy; 2022 Amper Software. We are not afilliated with Valve.</div>
+<div class="footer_social">
+<a href="https://twitter.com/TeamFortressS2" target="_blank"><i class="mdi mdi-twitter"></i></a>
+<a href="https://discord.gg/tMnTsUsVjP" target="_blank"><i class="mdi mdi-discord"></i></a>
+<a href="https://steamcommunity.com/groups/ampersoftware" target="_blank"><i class="mdi mdi-steam"></i></a>
+</div>
+</footer>
+</div>
+</body>
+<script type="text/javascript">
+	new Parallax({
+		selector: "#background",
+		multiplier: 0.5
+	});
+
+	new PopupPreview({
+		popup: "#popup_preview",
+		container: ".media_container",
+		caption: ".caption_container"
+	});
+</script>
+<script>
+	//
+	// Lozad
+	//
+	const observer = lozad();
+	observer.observe();
+
+	//
+	// AjaxDocLoad
+	//
+	AjaxDocLoad.Register("#site_content");
+
+	AjaxDocLoad.onprechange(() => {
+		document.querySelector("#background").style.opacity = 0;
+	});
+
+	AjaxDocLoad.onpostchange(() => {
+		document.querySelector("#background").style.opacity = 1;
+		observer.observe();
+	});
+</script>
+<script>
+	function Sus() {
+
+		let susUrl = "/engine/applications/blog/templates/tfs2/assets/images/sus.webp?v=79";
+
+		document.querySelector(".banner_title").innerText = "Among";
+		DoMeme(susUrl);
+
+		new Audio("https://cdn.discordapp.com/attachments/843512666060619806/870744310952366150/amogusssusus.wav")
+			.play();
+	}
+
+	function Sap() {
+		DoMeme("https://thumbs.gfycat.com/DismalUnfortunateBurro-size_restricted.gif");
+
+		new Audio("https://cdn.discordapp.com/attachments/843512666060619806/871795497105522818/sapper_plant.wav")
+			.play();
+
+		let sap = new Audio(
+			"https://cdn.discordapp.com/attachments/843512666060619806/871795536792027246/sapper_timer.wav");
+		sap.loop = true;
+		sap.play();
+
+		setTimeout(() => {
+			new Audio("https://wiki.teamfortress.com/w/images/c/cf/Spy_laughevil02.wav").play();
+		}, 300);
+	}
+
+	function DoMeme(img) {
+		for (let el of document.querySelectorAll("*")) {
+
+			if (el.id == "popup_preview") continue;
+
+			if (el.tagName == "IMG") {
+				el.setAttribute("src", img);
+			} else {
+				el.style.backgroundImage =
+					`url(${img})`;
+				el.style.backgroundSize = "contain";
+			}
+		}
+	}
+</script>
+</html>

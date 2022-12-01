@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/main.css?v=79">
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/fonts.css?v=79">
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/TFS2_Icons.css?v=79">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="../npm/%40mdi/font%405.9.55/css/materialdesignicons.min.css">
+<link href="../css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="../engine/applications/blog/templates/tfs2/assets/scripts/parallax_background.js?v=79" charset="utf-8"></script>
+<script src="../engine/applications/blog/templates/tfs2/assets/scripts/popup_preview.js?v=79" charset="utf-8"></script>
+<script src="../engine/core/templates/default/assets/scripts/API.js?v=79" charset="utf-8"></script>
+<script src="../engine/core/templates/default/assets/scripts/AjaxDocLoad.js?v=79" charset="utf-8"></script>
+
+<script type="text/javascript" src="../npm/lozad/dist/lozad.min.js"></script>
+
+<script async="" src="../gtag/js?id=G-5J0ZFCS7K3"></script>
+<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-5J0ZFCS7K3');
+	</script>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2416877417515654" crossorigin="anonymous"></script>
+
+<title>The First Steps — TF: Source 2</title>
+<meta property="og:title" content="The First Steps — TF: Source 2">
+<meta property="og:site_name" content="TF: Source 2">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/post/aug2021">
+<meta property="og:image" content="/engine/applications/blog/templates/tfs2/assets/images/post1_bg.png?v=79">
+<meta property="og:description" content="This is the first development blog post of the TF:S2 project.
+Get to know what the team has been up to the last few weeks, from rebuilding the bases of TF2, to improving the assets, and also some in game sneak peeks of TF2 in Source 2! (s&box)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:src" content="/engine/applications/blog/templates/tfs2/assets/images/post1_bg.png?v=79">
+<meta name="twitter:site" content="@TeamFortressS2">
+<meta name="twitter:title" content="The First Steps — TF: Source 2">
+<meta name="twitter:description" content="This is the first development blog post of the TF:S2 project.
+Get to know what the team has been up to the last few weeks, from rebuilding the bases of TF2, to improving the assets, and also some in game sneak peeks of TF2 in Source 2! (s&box)">
+
+<link rel="apple-touch-icon" sizes="180x180" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/apple-touch-icon.png?v=79">
+<link rel="icon" type="image/png" sizes="32x32" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon-32x32.png?v=79">
+<link rel="icon" type="image/png" sizes="16x16" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon-16x16.png?v=79">
+<link rel="manifest" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/site.webmanifest?v=79">
+<link rel="mask-icon" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/safari-pinned-tab.svg?v=79" color="#ea9b26">
+<link rel="shortcut icon" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon.ico?v=79">
+<meta name="theme-color" content="#ea9b26">
+<meta name="msapplication-TileColor" content="#ea9b26">
+<meta name="msapplication-config" content="/engine/applications/blog/templates/tfs2/assets/images/favicon/browserconfig.xml?v=79">
+</head>
+<body>
+<div id="popup_preview">
+<div class="media_container"></div>
+<div class="caption_container"></div>
+</div>
+<div id="background"></div>
+<div id="core">
+<header>
+<div class="topbar">
+<div class="topbar_header_container">
+<div class="container flex header_wrapper">
+<div class="header_rect_logotype">
+<a href="../index.htm">
+<img src="../engine/applications/blog/templates/tfs2/assets/images/tfs2_rect_logotype.png?v=79" alt="Team Fortress: Source 2">
+</a>
+</div>
+<div class="topbar_center_navigation topbar_header_container topbar_navigation">
+<ul>
+<a href="../news.html">
+<li> <i class="tfs2i icon-blog"></i> News</li>
+</a>
+<a href="../about.html">
+<li> <i class="tfs2i icon-about"></i> About</li>
+</a>
+<a href="../team.html">
+<li> <i class="tfs2i icon-team"></i> Team</li>
+</a>
+</ul>
+</div>
+<div class="topbar_hamburger topbar_header_container" onclick="document.querySelector('#hamburger_menu').classList.toggle('open')">
+<i class="mdi mdi-menu"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="hamburger_menu topbar_navigation" id="hamburger_menu">
+<ul>
+<a href="../news.html">
+<li> <i class="tfs2i icon-blog"></i> Blog</li>
+</a>
+<a href="../about.html">
+<li> <i class="tfs2i icon-about"></i> About</li>
+</a>
+<a href="../team.html">
+<li> <i class="tfs2i icon-team"></i> Team</li>
+</a>
+</ul>
+</div>
+</header>
+
+<div id="site_content">
+<div class="banner">
+<div class="container">
+<div class="banner_title">The First Steps</div>
+<div class="banner_tags">
+<div class="post_tag"><i class="mdi mdi-clock"></i> Saturday, Aug 7th, 2021</div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/page_post.css?v=79">
+<style>
+    #background {
+        background-image: url(../engine/applications/blog/templates/tfs2/assets/images/post1_bg.png);
+    }
+</style>
+
+<div class="page">
+<div class="separator"></div>
+<div class="content">
+<div class="container">
+<div class="section">
+<div class="section_content">
+<div class="section_static">
+<section id="What_is_TFS2">
+<div class="post_section popuppreview">
+<div class="post_section_title">What is TF:S2 <a href="#What_is_TFS2" onclick="CopyText('https://tfsource2.com/post/aug2021#What_is_TFS2')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p>Ever since Source 2 was first mentioned publicly as an engine that Valve was working on, a lot of people in the Team Fortress 2 community have started asking the question: “If Valve ever ports TF2 to Source 2, what would it look like? How different gameplay would be? And would TF2 even feel the same?”. Unfortunately, none of these questions have been answered properly up until this time.</p>
+<p>However, something really significant has happened recently that can change that - s&box, the spiritual successor of Garry’s Mod made on the Source 2 engine, has been released as part of a dev preview to a group of community members, including ourselves. It, pretty much, like Garry’s Mod itself, allows you to build whatever you want using the toolset that it provides. So we’ve decided to not lose that chance.</p>
+<p>We are all big TF2 fans here, most of us have sunk hundreds or even thousands hours into this game. So, we have decided that we are going to try to answer that exact question - we want to rebuild Team Fortress 2 mechanics, port all the assets from the base game to the new engine and see how different it can look and feel from the original game. This is what TF:S2 is about. Our goal is to remake, improve, iterate, and create a new Team Fortress experience on Source 2 engine using s&box.</p>
+<p>This project is a huge undertaking, we would have to consider all nitpicks of TF2 gameplay, try to rebuild every single mechanic to feel similar to the base game, but with enough dedication, I believe that we can do it! For more information visit our about page. But for now, please take a peek at what we have been busy with for the past few months.</p>
+</div>
+</section><section id="Porting_assets_to_Source_2">
+<div class="post_section popuppreview">
+<div class="post_section_title">Porting assets to Source 2 <a href="#Porting_assets_to_Source_2" onclick="CopyText('https://tfsource2.com/post/aug2021#Porting_assets_to_Source_2')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Justyn</div>
+</div>
+<p>In Source 2, Valve made tools to automatically import and convert Source 1 assets into Source 2, like maps, materials, models, and particles. These tools really help us out since we don’t have to manually import everything. However, these tools aren’t perfect and not really made for s&box: a lot of assets need to be fixed manually.</p>
+<p>Source 2 uses PBR instead of Phong Shading. So, I’ve been fixing many of the materials so it would look great in Source 2.</p>
+<p><img data-src='https://cdn.discordapp.com/attachments/871862201529565214/873592989983834163/sbox-dev_ry1YiMXn3F.jpg' class='lozad' data-caption='Fixed Materials'> <img data-src='https://cdn.discordapp.com/attachments/871862201529565214/873592993209253918/sbox-dev_PEfh7GMoOa.jpg' class='lozad' data-caption='Fixed Materials'> <img data-src='https://cdn.discordapp.com/attachments/871862201529565214/873592992005513246/sbox-dev_M3XL58hXxs.jpg' class='lozad' data-caption='Fixed Materials'> <img data-src='https://cdn.discordapp.com/attachments/871862201529565214/873592991284068372/sbox-dev_mUwsMUDdrZ.jpg' class='lozad' data-caption='Fixed Materials'></p>
+<p>All of the TF2 Particles have been ported into Source 2, but s&box broke all of them since a lot of the Initalizers got removed in the Particle Editor. Most of the particles can be fixed, but it’s not perfect because of those missing Initalizers.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pLvFkyB3LLc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p>The TF2 Skyboxes have to be manually ported over since there is no way to automatically port them over. Source 2 uses the Skybox’s HDR for ambient lighting and post processing bloom. So, It’s important to port over the TF2 Skyboxes with the original HDR.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x3CfZlo07A4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+</section><section id="Getting_Well_on_Source_2">
+<div class="post_section popuppreview">
+<div class="post_section_title">Getting Well on Source 2 <a href="#Getting_Well_on_Source_2" onclick="CopyText('https://tfsource2.com/post/aug2021#Getting_Well_on_Source_2')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> KAYA</div>
+</div>
+<p>Over the month of June, I’ve been experimenting with importing Source maps into Source 2. There is no other way to describe it: porting maps is a really slow process if you want to make it right, and decent for Source 2 standards. Despite getting some pretty cool results, it wasn’t that much worth it.</p>
+<p>The reason being that Source 2 maps are now entirely mesh based. Long live the BSP format, that uses block brushes to build a map, say hello to meshes! Which means that all blocks have backfaces, that can cause troubles for the lighting, VIS calculation and many more optimisation issues specific to Source 2. As well as many other obsolete entities that have to be replaced or cleared.</p>
+<p>The first map we’ve been trying to import with Justyn was Arena Well, we wanted a rather small map that we liked. The first part was getting the materials fixed as well as creating new ones for the blend textures. I had to redo all the floor meshes in order to subdivide them to paint the blend textures on them, the old Source blocks were already causing me troubles.</p>
+<p><video data-src='https://files.amperpowered.com/kaya/QHZ7AB/blend.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption='Blend Materials'></video></p>
+<p>Once that was done, I spent a couple hours redoing the entire middle point building’s meshes to see how long it would take me to do it, and how it would look. While it helped with the lighting and some various optimization, it made me literally rebuild a part of the map from scratch. <img data-src='https://files.amperpowered.com/kaya/yDIMW0/chrome_qOLJ48qVA2.jpg' class='lozad' data-caption='Arena Well'></p>
+<p>You don’t have to go through this if you really wanted to import a map from Source. I just felt that if we wanted to import some, we should do it correctly, which takes a lot of time. Here are some screenshots of the latest build I made of Well:</p>
+<p><img data-src='https://cdn.discordapp.com/attachments/871862201529565214/873347887386480690/ARENA_Well_1.png' class='lozad' data-caption='Arena Well on Source 2'> <img data-src='https://cdn.discordapp.com/attachments/871862201529565214/873347888908996659/ARENA_Well_2.png' class='lozad' data-caption='Arena Well on Source 2'> <img data-src='https://cdn.discordapp.com/attachments/871862201529565214/873347890251182140/ARENA_Well_3.png' class='lozad' data-caption='Arena Well on Source 2'> <img data-src='https://cdn.discordapp.com/attachments/871862201529565214/873347887403266138/ARENA_Well_4.png' class='lozad' data-caption='Arena Well on Source 2'></p>
+<p>One thing I would recommend to anyone willing to do some TF2 content in s&box: try doing original levels and do not stick to only importing decades old broken Source maps.</p>
+</div>
+</section><section id="TFS2_Showcase_Map">
+<div class="post_section popuppreview">
+<div class="post_section_title">TF:S2 Showcase Map <a href="#TFS2_Showcase_Map" onclick="CopyText('https://tfsource2.com/post/aug2021#TFS2_Showcase_Map')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> KAYA</div>
+</div>
+<p>This is what I’ve been playing with over the end of July: a simple original test map, spytech themed, which served me as a better introduction to Source 2’s Hammer, also made to showcase our fixed assets. This was definitely more interesting to do, especially when testing a new engine, and seeing how you could make good use of it with imported and fixed assets.</p>
+<p>This map is now released on s&box! If you have access to the game, feel free to try it out and let me know what you think!</p>
+<p>Here are some screenshots of it: <img data-src='https://cdn.discordapp.com/attachments/737058291170934815/873589953144180817/sbox_0104.png' class='lozad' data-caption='Source 2 Spytech Showcase'> <img data-src='https://cdn.discordapp.com/attachments/737058291170934815/873589988367953991/sbox_0112.png' class='lozad' data-caption='Source 2 Spytech Showcase'> <img data-src='https://cdn.discordapp.com/attachments/737058291170934815/873590012694913034/sbox_0113.png' class='lozad' data-caption='Source 2 Spytech Showcase'> <img data-src='https://cdn.discordapp.com/attachments/737058291170934815/873590088515350548/sbox_0115.png' class='lozad' data-caption='Source 2 Spytech Showcase'></p>
+</div>
+</section><section id="The_New_And_Improved_HUD">
+<div class="post_section popuppreview">
+<div class="post_section_title">The New And Improved HUD <a href="#The_New_And_Improved_HUD" onclick="CopyText('https://tfsource2.com/post/aug2021#The_New_And_Improved_HUD')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> СheddZy</div>
+</div>
+<p>There is no denying it: The Team Fortress 2 Heads Up Display (or, HUD) is as iconic as any other part of the game. Its perfect implementation of the game's art-style and the surprising readability, being not as distracting as you would expect during gameplay is what has personally set it apart from any other HUD in most games I've played in the last 10 years.</p>
+<p><img data-src='https://cdn.discordapp.com/attachments/871862201529565214/873212871117537320/20210806103550_1.jpg' class='lozad' data-caption='Standard Team Fortress 2 Hud'></p>
+<p>When the UI team & I were tasked with bringing the old HUD's style, refreshing it up and making it fit a modern title, it was definitely a daunting job. We started first re-implementing the crucial parts of the HUD, but later, as our plans grew toward a different direction, we started working on finding a direction to compliment the original interface while making room for new elements we want to see in our unique experience.</p>
+<p><img data-src='https://cdn.discordapp.com/attachments/843512666060619806/873324194073575434/le_funny.png' class='lozad' data-caption='TF:S2 Experimental HUD'></p>
+</div>
+</section><section id="Implementation_of_Classes_and_Weapons">
+<div class="post_section popuppreview">
+<div class="post_section_title">Implementation of Classes and Weapons <a href="#Implementation_of_Classes_and_Weapons" onclick="CopyText('https://tfsource2.com/post/aug2021#Implementation_of_Classes_and_Weapons')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p>The first thing that comes into one's mind when thinking about TF2 are classes and weapons. It’s a class-based shooter after all. So we thought that starting with reimplementing TF2 classes and their classes would be a great point to start. But how do we do that?</p>
+<p>In the base game, all class properties are hardcoded in the game’s code. We, however, want to eventually allow everyone else to fork our gamemode and add any new class or weapon they want into the game and play with it. And this is where the Custom Asset System shines! As well as allowing you to work with all predefined asset types using Source 2 tools, (like sounds, models, materials, etc), s&box also allows you to create your own types and work with them in the code.</p>
+<p>So here’s what we did: to create a new class you create a new file called classname.tfclass. This file can be opened by the s&box tool called “Inspector” and it basically allows you to specify all class-specific properties, like name, player model, arms model, health, speed in a pretty UI and load that information in the game. Compare that to Source 1 where you would have to define all those properties in the game’s code.</p>
+<p><img data-src='https://files.amperpowered.com/moonlydays/i5QjnD/__2021-08-03_154004.png' class='lozad' data-caption=''></p>
+<p>We have chosen to do the same approach with weapons, thus significantly easing the process of adding them into the gamemode and allowing their modification to be done in a pretty UI.</p>
+<p><img data-src='https://files.amperpowered.com/moonlydays/sCbHlz/qaHjafte17.png' class='lozad' data-caption=''></p>
+</div>
+</section><section id="Soldier">
+<div class="post_section popuppreview">
+<div class="post_section_title">Soldier <a href="#Soldier" onclick="CopyText('https://tfsource2.com/post/aug2021#Soldier')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p>Soldier was the first class I’ve decided to implement. There is not really a particular reason why I decided to start with this class, I kinda just felt like it. It is the most generic class you could think of to port, so it just came out like that naturally. So, what can I say about this class? Since this was the first class to be ever added, it was also the class which I also used to test the asset system and used to develop a “base” for Team Fortress weapons.</p>
+<p>Shotgun was probably the easiest weapon to implement. Since s&box already contained the code for hitscan weapons, like pistols, it was just a question of making this said pistol fire a few more bullets per shot in random direction and you’ve got yourself a working shotgun.</p>
+<p>Unlike pistols, s&box didn’t have any code for melee weapons, so I had to get a bit more creative on this behalf. But it still wasn’t such a hard task to implement, because all you had to do is modify the bullet to have maximum distance it can trace to and add a small delay between when you hit the attack button and attack was made to match the animation. I think it came out pretty nicely, but I'm still wondering how I can improve this.</p>
+<p>And the final boss, the Rocket Launcher. I’ve posted a few videos showcasing this weapon on my Twitter account a few months ago, but the truth is that the Rocket Launcher, or specifically the rocket it fires, went through so many iterations, that what you saw there was probably rewritten like at least two times. Biggest issue here was trying to make the rocket feel and work as close to Source 1 as possible. The actual firing works nicely at this moment and I'm satisfied with it. But what I am not satisfied about, however, is the rocket jumping. Source 2 uses a different physics engine so that means making Rocket Jumping feel similar to Source 1 will take some time. But I'm pretty sure with enough iteration making it feel authentic is possible.</p>
+<p><video data-src='https://files.amperpowered.com/moonlydays/gMW9EE/Desktop_2021.08.03_-_20.24.56.05.webm' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+</div>
+</section><section id="Pyro">
+<div class="post_section popuppreview">
+<div class="post_section_title">Pyro <a href="#Pyro" onclick="CopyText('https://tfsource2.com/post/aug2021#Pyro')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p>Pyro was the second class I decided to implement. Since I've already implemented a class system for the soldier, I was able to just reuse that to create Pyro. So from now on, I'll be mostly talking about weapons and their gameplay.</p>
+<p>So, the Flamethrower. Justyn, a member of our Source 1 Porting team was able to fix the flamethrower particle from TF2 and improve it. Now it actually lights the area around it to make the flame feel more natural.</p>
+<p>I’ve also taken some time to implement airblasting. However I’ve also decided to experiment with it a bit and made it also push the physics props away, which it doesn’t do in the base game. I think it turned out pretty solid.</p>
+<p>Pyro also wields Shotgun and Fire Axe, but for these, I just reused what I did for Soldier with one exception of changing the Shovel model to Fire Axe.</p>
+<p><video data-src='https://files.amperpowered.com/moonlydays/5KEYmz/Desktop_2021.08.03_-_20.25.53.06.webm' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+</div>
+</section><section id="Scout">
+<div class="post_section popuppreview">
+<div class="post_section_title">Scout <a href="#Scout" onclick="CopyText('https://tfsource2.com/post/aug2021#Scout')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p>Scout, by far, was the easiest class to rebuild. The Scattergun, much like in TF2, is literally just a shotgun with a different model. So getting that done was just a matter of changing the model of the shotgun to the scattergun.</p>
+<p>Pistol is in the similar bowl, it doesn’t require any new mechanics to be made in the code, so to add it I just needed to tweak the properties a bit, like: attack intervals, reload time, etc.</p>
+<p>And bat is literally just a shovel from Soldier with a different model.</p>
+<p><video data-src='https://files.amperpowered.com/moonlydays/0RPiea/Desktop_2021.08.03_-_20.20.26.01.webm' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+</div>
+</section><section id="Demoman">
+<div class="post_section popuppreview">
+<div class="post_section_title">Demoman <a href="#Demoman" onclick="CopyText('https://tfsource2.com/post/aug2021#Demoman')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p>And the last one - Demoman. He was probably the most challenging class to make this far, since two out of three of his base weapons are projectile based. To make him work I had to spend a bit more time tinkering down the projectile code to allow all the functionality that base grenades have. But in the end, I think it turned out pretty nicely. Again, big props to Justyn, who ported and improved all the models.</p>
+<p><video data-src='https://files.amperpowered.com/moonlydays/O7VEgB/Desktop_2021.08.03_-_20.22.19.04.webm' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+</div>
+</section><section id="Sniper">
+<div class="post_section popuppreview">
+<div class="post_section_title">Sniper <a href="#Sniper" onclick="CopyText('https://tfsource2.com/post/aug2021#Sniper')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Ivory</div>
+</div>
+<p>Sniper was a pretty straightforward class to recreate as his weapons are entirely hitscan and his melee/secondary have no special gimmicks. The Sniper Rifle is his only weapon that needed any real tinkering to get working. The power charge currently works almost identically to how it does in TF2 - scoping activates the charge automatically, which takes about 1.3 seconds to begin having an effect, and 3.3 seconds to reach full charge. It scales from 50 to 150 damage.</p>
+<p>The SMG and Kukri were very simple as they didn't need any unique mechanics. The SMG is basically a pistol with a larger clip size and better accuracy, while the Kukri is just another melee weapon using a different model.</p>
+<p><video data-src='https://files.amperpowered.com/moonlydays/xTeaHt/Desktop_2021.08.06_-_10.02.37.01.webm' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+</div>
+</section>
+<div>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="The First Steps" data-url="https://tfsource2.com/post/aug2021" data-hashtags="tfs2" data-show-count="false">Tweet</a>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function CopyText(text) {
+        if (!navigator.clipboard) {
+            fallbackCopyTextToClipboard(text);
+            return;
+        }
+        navigator.clipboard.writeText(text).then(function () {
+            console.log('Async: Copying to clipboard was successful!');
+        }, function (err) {
+            console.error('Async: Could not copy text: ', err);
+        });
+    }
+
+    function fallbackCopyTextToClipboard(text) {
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+
+        // Avoid scrolling to bottom
+        textArea.style.top = "0";
+        textArea.style.left = "0";
+        textArea.style.position = "fixed";
+
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'successful' : 'unsuccessful';
+            console.log('Fallback: Copying text command was ' + msg);
+        } catch (err) {
+            console.error('Fallback: Oops, unable to copy', err);
+        }
+
+        document.body.removeChild(textArea);
+    }
+</script>
+</div>
+<footer>
+<a href="https://twitter.com/AmperSoftware" target="_blank">
+<div class="footer_logotype"><img src="../engine/applications/blog/templates/tfs2/assets/images/amper_logotype.svg?v=79" alt="Amper Software"></div>
+</a>
+<div class="footer_copyright">&copy; 2022 Amper Software. We are not afilliated with Valve.</div>
+<div class="footer_social">
+<a href="https://twitter.com/TeamFortressS2" target="_blank"><i class="mdi mdi-twitter"></i></a>
+<a href="https://discord.gg/tMnTsUsVjP" target="_blank"><i class="mdi mdi-discord"></i></a>
+<a href="https://steamcommunity.com/groups/ampersoftware" target="_blank"><i class="mdi mdi-steam"></i></a>
+</div>
+</footer>
+</div>
+</body>
+<script type="text/javascript">
+	new Parallax({
+		selector: "#background",
+		multiplier: 0.5
+	});
+
+	new PopupPreview({
+		popup: "#popup_preview",
+		container: ".media_container",
+		caption: ".caption_container"
+	});
+</script>
+<script>
+	//
+	// Lozad
+	//
+	const observer = lozad();
+	observer.observe();
+
+	//
+	// AjaxDocLoad
+	//
+	AjaxDocLoad.Register("#site_content");
+
+	AjaxDocLoad.onprechange(() => {
+		document.querySelector("#background").style.opacity = 0;
+	});
+
+	AjaxDocLoad.onpostchange(() => {
+		document.querySelector("#background").style.opacity = 1;
+		observer.observe();
+	});
+</script>
+<script>
+	function Sus() {
+
+		let susUrl = "/engine/applications/blog/templates/tfs2/assets/images/sus.webp?v=79";
+
+		document.querySelector(".banner_title").innerText = "Among";
+		DoMeme(susUrl);
+
+		new Audio("https://cdn.discordapp.com/attachments/843512666060619806/870744310952366150/amogusssusus.wav")
+			.play();
+	}
+
+	function Sap() {
+		DoMeme("https://thumbs.gfycat.com/DismalUnfortunateBurro-size_restricted.gif");
+
+		new Audio("https://cdn.discordapp.com/attachments/843512666060619806/871795497105522818/sapper_plant.wav")
+			.play();
+
+		let sap = new Audio(
+			"https://cdn.discordapp.com/attachments/843512666060619806/871795536792027246/sapper_timer.wav");
+		sap.loop = true;
+		sap.play();
+
+		setTimeout(() => {
+			new Audio("https://wiki.teamfortress.com/w/images/c/cf/Spy_laughevil02.wav").play();
+		}, 300);
+	}
+
+	function DoMeme(img) {
+		for (let el of document.querySelectorAll("*")) {
+
+			if (el.id == "popup_preview") continue;
+
+			if (el.tagName == "IMG") {
+				el.setAttribute("src", img);
+			} else {
+				el.style.backgroundImage =
+					`url(${img})`;
+				el.style.backgroundSize = "contain";
+			}
+		}
+	}
+</script>
+</html>

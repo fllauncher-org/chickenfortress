@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/main.css?v=79">
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/fonts.css?v=79">
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/TFS2_Icons.css?v=79">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="../npm/%40mdi/font%405.9.55/css/materialdesignicons.min.css">
+<link href="../css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="../engine/applications/blog/templates/tfs2/assets/scripts/parallax_background.js?v=79" charset="utf-8"></script>
+<script src="../engine/applications/blog/templates/tfs2/assets/scripts/popup_preview.js?v=79" charset="utf-8"></script>
+<script src="../engine/core/templates/default/assets/scripts/API.js?v=79" charset="utf-8"></script>
+<script src="../engine/core/templates/default/assets/scripts/AjaxDocLoad.js?v=79" charset="utf-8"></script>
+
+<script type="text/javascript" src="../npm/lozad/dist/lozad.min.js"></script>
+
+<script async="" src="../gtag/js?id=G-5J0ZFCS7K3"></script>
+<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-5J0ZFCS7K3');
+	</script>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2416877417515654" crossorigin="anonymous"></script>
+
+<title>The Finer Details — TF: Source 2</title>
+<meta property="og:title" content="The Finer Details — TF: Source 2">
+<meta property="og:site_name" content="TF: Source 2">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/post/the-finer-details">
+<meta property="og:image" content="/engine/applications/blog/templates/tfs2/assets/images/post3_bg.png?v=79">
+<meta property="og:description" content="In this month's blog post we invited members of our team to discuss what they’ve achieved since we last dived into the development process for the Team Fortress: Source 2 project.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:src" content="/engine/applications/blog/templates/tfs2/assets/images/post3_bg.png?v=79">
+<meta name="twitter:site" content="@TeamFortressS2">
+<meta name="twitter:title" content="The Finer Details — TF: Source 2">
+<meta name="twitter:description" content="In this month's blog post we invited members of our team to discuss what they’ve achieved since we last dived into the development process for the Team Fortress: Source 2 project.">
+
+<link rel="apple-touch-icon" sizes="180x180" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/apple-touch-icon.png?v=79">
+<link rel="icon" type="image/png" sizes="32x32" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon-32x32.png?v=79">
+<link rel="icon" type="image/png" sizes="16x16" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon-16x16.png?v=79">
+<link rel="manifest" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/site.webmanifest?v=79">
+<link rel="mask-icon" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/safari-pinned-tab.svg?v=79" color="#ea9b26">
+<link rel="shortcut icon" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon.ico?v=79">
+<meta name="theme-color" content="#ea9b26">
+<meta name="msapplication-TileColor" content="#ea9b26">
+<meta name="msapplication-config" content="/engine/applications/blog/templates/tfs2/assets/images/favicon/browserconfig.xml?v=79">
+</head>
+<body>
+<div id="popup_preview">
+<div class="media_container"></div>
+<div class="caption_container"></div>
+</div>
+<div id="background"></div>
+<div id="core">
+<header>
+<div class="topbar">
+<div class="topbar_header_container">
+<div class="container flex header_wrapper">
+<div class="header_rect_logotype">
+<a href="../index.htm">
+<img src="../engine/applications/blog/templates/tfs2/assets/images/tfs2_rect_logotype.png?v=79" alt="Team Fortress: Source 2">
+</a>
+</div>
+<div class="topbar_center_navigation topbar_header_container topbar_navigation">
+<ul>
+<a href="../news.html">
+<li> <i class="tfs2i icon-blog"></i> News</li>
+</a>
+<a href="../about.html">
+<li> <i class="tfs2i icon-about"></i> About</li>
+</a>
+<a href="../team.html">
+<li> <i class="tfs2i icon-team"></i> Team</li>
+</a>
+</ul>
+</div>
+<div class="topbar_hamburger topbar_header_container" onclick="document.querySelector('#hamburger_menu').classList.toggle('open')">
+<i class="mdi mdi-menu"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="hamburger_menu topbar_navigation" id="hamburger_menu">
+<ul>
+<a href="../news.html">
+<li> <i class="tfs2i icon-blog"></i> Blog</li>
+</a>
+<a href="../about.html">
+<li> <i class="tfs2i icon-about"></i> About</li>
+</a>
+<a href="../team.html">
+<li> <i class="tfs2i icon-team"></i> Team</li>
+</a>
+</ul>
+</div>
+</header>
+
+<div id="site_content">
+<div class="banner">
+<div class="container">
+<div class="banner_title">The Finer Details</div>
+<div class="banner_tags">
+<div class="post_tag"><i class="mdi mdi-clock"></i> Friday, Oct 29th, 2021</div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/page_post.css?v=79">
+<style>
+    #background {
+        background-image: url(../engine/applications/blog/templates/tfs2/assets/images/post3_bg.png);
+    }
+</style>
+
+<div class="page">
+<div class="separator"></div>
+<div class="content">
+<div class="container">
+<div class="section">
+<div class="section_content">
+<div class="section_static">
+<section id="Back_to_work">
+<div class="post_section popuppreview">
+<div class="post_section_title">Back to work <a href="#Back_to_work" onclick="CopyText('https://tfsource2.com/post/the-finer-details#Back_to_work')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> TF:S2 Team</div>
+</div>
+<p>It’s been a busy two months for the Amper team. The start of the university year and end of summer festivities have meant we’ve had to temporarily re-target our priorities. However, this has provided an excellent opportunity for the team to put the time and care into the finer details needed for an authentic Team Fortress experience.</p>
+<p>In this month's blog post we invited members of our team to discuss what they’ve achieved since we last dived into the development process for the Team Fortress: Source 2 project.</p>
+<p>In addition to the continued development of the project, we’ve been working behind the scenes to rethink our approach to social media, branding, and community. We’ll have more to share on this at a later date!</p>
+<p>Now, onto the details!</p>
+</div>
+</section><section id="Faithfully_recreating_the_signature_style">
+<div class="post_section popuppreview">
+<div class="post_section_title">Faithfully recreating the signature style <a href="#Faithfully_recreating_the_signature_style" onclick="CopyText('https://tfsource2.com/post/the-finer-details#Faithfully_recreating_the_signature_style')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> rob5300</div>
+</div>
+<p>s&box recently added the ability for addons to use custom shaders. Using HLSL, we are able to extend the base Source 2 shaders to adjust how models look in-game. This lets us begin to re-implement various iconic TF2 shading features to better match its style. Currently we have two features being worked on: rim lighting and light warps. Here’s a sneak peek at our progress on this: <video data-src='https://cdn.discordapp.com/attachments/853034622757765140/895769588657184809/U3favk5CmS.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+<p><h1>Rim Lighting Rim Lighting is used in TF2 to ensure that player models are always somewhat visible, even in low visibility situations, such as dark corners and tunnels. This is achieved by highlighting the very edges of the model in specific spots, allowing their iconic silhouettes to stand out against similarly colored backgrounds. We currently have a basic implementation of this, letting us achieve the same effect. Here’s an example of how Rim Lighting is implemented: <img data-src='https://cdn.discordapp.com/attachments/879377966830878760/903702397443006524/rimlightingexample_rob5300_01.png' class='lozad' data-caption=''>
+<p><h1>Lightwarp Lightwarp is a feature that allows adjustment of how models are lit. Source 1 used this to adjust the standard light to dark transition with a custom, 2D texture-based gradient. This effect is used in many Source 1 titles, such as Day of Defeat and TF2, which makes extensive use of this feature to make the light to dark transition harsher and create its signature style. We currently have a basic version of this, however more tweaking is needed to to more closely resemble Source 1’s implementation.
+<p>Here’s an example of what a Lightwarp texture looks like: <img data-src='https://developer.valvesoftware.com/w/images/7/70/Pyro_lightwarp.png' class='lozad' data-caption=''> <img data-src='https://cdn.discordapp.com/attachments/871862201529565214/902592741639356427/Screenshot_203.png' class='lozad' data-caption=''></p>
+<p>Here is an example using a Lightwarp to achieve a cell shaded style. This better illustrates the effect lightwarps can have on how a model is lit. This is another example of a <a href='https://developer.valvesoftware.com/wiki/$lightwarptexture'>Lightwarp</a> texture, this time highlighting how one might achieve a more stylised visual: <img data-src='https://developer.valvesoftware.com/w/images/4/4a/Cel_lightwarp.png' class='lozad' data-caption=''></p>
+<p>Cell shade <a href='https://developer.valvesoftware.com/wiki/$lightwarptexture'>Lightwarp</a> example: <img data-src='https://cdn.discordapp.com/attachments/879377966830878760/903702392682455040/lightwarpexample_rob5300_01.png' class='lozad' data-caption=''></p>
+</h1></h1></div>
+</section><section id="The_Animation_Grind">
+<div class="post_section popuppreview">
+<div class="post_section_title">The Animation Grind <a href="#The_Animation_Grind" onclick="CopyText('https://tfsource2.com/post/the-finer-details#The_Animation_Grind')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> [N-cognito]</div>
+</div>
+<p>Our goal in the long term is to replicate TF2’s animation system as closely as possible, or even upgrade it to take greater advantage of the Source 2 toolset. Unfortunately, due to some key differences between Source 1 and Source 2’s methods of setting up models and animations, a lot of manual work is needed to achieve this.</p>
+<p>As of right now, we actually have all nine classes up and running with proper, albeit barebones, animations. Now what has to be done is the cleaning up of the playermodel files. Due to the age of TF2, the multitude of developers it has seen, and the non-1-to-1 transfer of Source 1 content to Source 2, there is a lot of mess that has made its way into TF:S2 models.</p>
+<p>https://streamable.com/8t1u2x</p>
+<p>The biggest hurdle right now is the IK Rule system. The system used in Source 1 was very simple, but very easy to set up and use, and could be directly applied to an animation sequence. Source 2’s IK System is far more robust, but unfortunately is not transferable and requires a bit of extra setup to get working without breaking TF2’s original animation system. As you could imagine, doing this for 3+ weapon animation sets for 4+ movement types with 9+ directional animations for 9 classes can be a bit exhausting (108 animations minimum for each class, just for foot IK!). This is especially tedious for Scout and Medic, as they have directional animations for their jump animations due to their double jump and coat respectively.</p>
+<p>I had been ignoring these issues for the sake of getting the playermodels working for internal playtests, but in the end I aim to clean them up properly. My goal is to make it as easy as possible to understand, deconstruct, and reuse our files, as accessible modding is a HUGE reason I got into TF2 in the first place.</p>
+<p>Side note: Although we do not plan to use them in the release version of TF Base, I will be looking into setting up non-stock weapon animations so they are easier for creators to access at launch. This includes animations for weapons such as the Huntsman, Flaregun, and the Eyelander. However, I cannot guarantee we will ship with these finished as they are low priority compared to other features and mechanics yet to be implemented.</p>
+</div>
+</section><section id="Critical_Hits">
+<div class="post_section popuppreview">
+<div class="post_section_title">Critical Hits <a href="#Critical_Hits" onclick="CopyText('https://tfsource2.com/post/the-finer-details#Critical_Hits')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Mikusch</div>
+</div>
+<p>Nothing feels more powerful to me than landing a critical rocket on a target. This is why I have taken up the task of implementing critical hits into TF:S2.</p>
+<p>It might be surprising to learn that most of the development time for critical hits was spent on the visuals. The functional implementation was rather simple, as for the most part it is a matter of simply multiplying the damage by a factor of 3.</p>
+<p>The real challenge was making it look right in this new engine. The Source engine had a nifty little thing called material proxies, which, among other things, also handled the critical weapon glow. They allowed the TF2 developers to set parameters in the weapon's material, in this case the $selfillum parameter.</p>
+<p>To match the weapon glow as accurately as possible, I needed to find a way to replicate this behavior. Luckily, Source 2 has something similar called dynamic material expressions. This required me to edit all existing weapon materials to support these expressions, but after a bit of experimentation, I managed to replicate the glow effect with satisfying results.</p>
+<p>But of course, that was not everything. Afterwards, I implemented the critical shot sounds and the particle effects surrounding the crit-boosted weapon. Then, there was just one thing left to do: bullet tracers. In TF2, hitscan weapons emit so-called particle tracers, which are thin lines that rapidly travel from your weapon barrel towards the bullet’s impact point. They give off the illusion that the bullets are actually traveling towards your target. Since critical hits in TF2 use special particle tracers that leave a glowing effect on the impact point, I felt compelled to add support for them.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZkFCjLOllto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p>Fun fact: The weapon particle actually attaches to your hands, not your weapon. This is how it works in Team Fortress 2 as well. You're welcome for never being able to unsee this.</p>
+</div>
+</section><section id="HUD">
+<div class="post_section popuppreview">
+<div class="post_section_title">HUD <a href="#HUD" onclick="CopyText('https://tfsource2.com/post/the-finer-details#HUD')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p>In the latest blog post we announced that as part of creating the TF Base in Source 2, we want to stick as closely as possible to vanilla TF2. And this, of course, implies the HUD as well.</p>
+<p>Over the course of the last few months I’ve been doing some work on recreating the base Team Fortress 2 HUD in s&box. One of the most notable differences between these two games is the how HUD systems are handled. People who have at least tried messing with the HUD in the base game may already know that TF2 uses the vgui system.</p>
+<p>While the vgui system is good at what does, I wouldn’t consider vgui the most robust HUD system out there. In s&box however, for HUD creation we use scss (for better or for worse, depending on how you think about it). This system turns the game’s HUD into a pseudo web page with lots of elements that you can stylize like you would on a real HTML page with CSS: each HUD element has its own class, to which we assign different properties in the stylesheet file. Stylesheet files are hot loaded in s&box, which makes the process of quickly changing the file and seeing the output result incredibly smooth and simple.</p>
+<p>Now let’s talk specifically about the TF2 HUD; it is well known that the way TF2’s UI elements were constructed is not ideal. Sometimes they overlap, overflow the container and even straight up disappear - good ol’ Source spaghetti. Since s&box uses scss instead of vgui, with a heavy focus on flexbox, aligning elements together becomes so much easier. In order to better organize the elements and make it as much not mess as possible, I have split the HUD elements into 3 main categories: vitals, weapons and objectives.</p>
+<p>Elements in the vitals category showcasing all the information about the player’s state - Health, Ammo, Charges, Effect Meters, etc.</p>
+<p>The weapon category contains all the custom elements that are created by the weapon itself, such as the overlay that appears when you are scoped in with the Sniper Rifle.</p>
+<p>Objective elements contain everything related to the current gamemode state, like timers and counters. Each category has its own creation and destruction hooks that can help the developer show and hide certain HUD elements on demand.</p>
+<p>I am trying to make all HUD elements as abstract as I possibly can, so that (with proper documentation) people can reuse/modify them according to their own needs. For example: if you want to make a gamemode that involves capturing 12 control points with the CTF flags in 12 minutes, you can focus on building the gamemode logic, not tinkering with the position of the HUD elements - it all should just automatically work. <img data-src='https://cdn.discordapp.com/attachments/879377966830878760/903702388689494056/hud_moonly_01.png' class='lozad' data-caption=''></p>
+</div>
+</section><section id="The_Gamemode_Template">
+<div class="post_section popuppreview">
+<div class="post_section_title">The Gamemode Template <a href="#The_Gamemode_Template" onclick="CopyText('https://tfsource2.com/post/the-finer-details#The_Gamemode_Template')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p><i>Please note that the following topic is in heavy development and is subject to change...</i></p>
+<p>I previously mentioned how the HUD in TF2 was not in a great state behind the curtain. Oh boy - don’t even get me started on the gamemode logic.</p>
+<p>If you made or at least tried to make a map in the Team Fortress 2 version of the Hammer, you probably have noticed that sometimes configuring the gamemode for your level can be a bit chaotic. For instance, some game modes require you to put just two flag entities and two capture zones to make a CTF map. Some require you to mess with team_round_timer, tf_gamerules, and other logic entities’ I/O system to get something like A/D or 5CP done, and some game modes have their own tf_logic_* entities that presumably control the gamemode.</p>
+<p>It’s very inconsistent and sometimes counter-intuitive, in my opinion, but you can get used to it. And so did literally everyone who made any TF2 map in the history of TF2 maps. However if you try to go a little bit deeper, you will soon find out that there’s always a certain extent on how far you can go with gamemodes.</p>
+<p>Since we are rewriting Team Fortress 2 from scratch on a new engine I wanted to make the whole system more consistent and accessible so that people who make levels can have some sort of customizability in what they want players to do.</p>
+<p>For now, I have decided to split gamemode related entities in two parts: gamemode entities and objective entities:</p>
+<p>The first part defines the overall logic for the gamemode: it declares how players should spawn, what are the win conditions, what HUD elements should it have, etc. Every level must contain only one of these gamemode entities.</p>
+<p>The other part is objective entities - things that players must interact with: control points, flags, timers, counters, etc. Each entity has its own purpose and can be reused across gamemodes.</p>
+<p>For instance, in game modes like A/D we have a countdown timer entity (tf_logic_timer), which is used to add a time limit to the map. In something like KOTH we will have two timer entities, one per team, and both timers will be shown on the HUD. In the same sense, if you, for example, decide to make a KOTH gamemode with 4 teams instead of 2, adding those 4 other times to the system will be just a matter of adding 2 more timer entities for both new teams.</p>
+<p>I expect this to be iterated upon once we get these tools in the hands of our Level Designers to make changes based on their feedback. Once we come down to a more or less final design, this system will be documented and prefabs for each gamemode will be made for public use. <img data-src='https://cdn.discordapp.com/attachments/871862201529565214/903678909533524018/unknown.png' class='lozad' data-caption=''></p>
+</div>
+</section><section id="Mercenary_Park_Assets">
+<div class="post_section popuppreview">
+<div class="post_section_title">Mercenary Park Assets <a href="#Mercenary_Park_Assets" onclick="CopyText('https://tfsource2.com/post/the-finer-details#Mercenary_Park_Assets')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Beat Crazey</div>
+</div>
+<p><img data-src='https://cdn.discordapp.com/attachments/879377966830878760/903702403948347402/mercpark_beatcrazey_02.png' class='lozad' data-caption=''></p>
+<p>Justyn and I spent some time porting and fixing all assets used in cp_mercenarypark, enabling them to work well with Source 2’s Physically Based shaders. The only thing we could not retain from the original assets was the foliage sway effect used in the palm trees, which required a vertex shader not present in s&box. Fortunately, we can author our own shader and implement this effect in the future. <img data-src='https://cdn.discordapp.com/attachments/879377966830878760/903702402639749130/mercpark_beatcrazey_01.png' class='lozad' data-caption=''></p>
+<p>As many of you are aware, in 2018 Valve released the ‘Supervillain Lair’ map for SteamVR Home, which used Mercenary Park assets. Justyn brought many of these assets over because they were already tuned for Source 2’s shaders, including this unused Parasol material that we thought was interesting to share. <img data-src='https://cdn.discordapp.com/attachments/853034622757765140/901890503832920154/unknown.png' class='lozad' data-caption=''></p>
+<p>Just as a frame of reference, the original shared its UV and material with 10+ other models in the map as an optimization to reduce draw calls through more efficient batch rendering. On the other hand, the SteamVR Home version has its own UV and it comes as a Physically based material! <img data-src='https://cdn.discordapp.com/attachments/853034622757765140/902751520263667782/unknown.png' class='lozad' data-caption=''> <img data-src='https://cdn.discordapp.com/attachments/853034622757765140/902753774282616842/unknown.png' class='lozad' data-caption=''></p>
+<p>It is bewildering why Valve chose to not use this asset after spending a significant amount of time polishing it up, but I guess we found a use for it…</p>
+</div>
+</section><section id="From_Dawn_Till_Dusk">
+<div class="post_section popuppreview">
+<div class="post_section_title">From Dawn Till Dusk <a href="#From_Dawn_Till_Dusk" onclick="CopyText('https://tfsource2.com/post/the-finer-details#From_Dawn_Till_Dusk')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> KAYA</div>
+</div>
+<p>I recently made some minor changes to Arena Well to fix up the lighting a little bit, and got it as close to TF2 as I could, focusing on environment lighting and overall saturation of the map. It’s still hard to reproduce the bloomy yellow/orange sunlight shining on the walls, but I’m sure we’ll find a way. <img data-src='https://cdn.discordapp.com/attachments/879377966830878760/903702757352034394/arenawell_kaya_01.png' class='lozad' data-caption=''></p>
+<p>As I already covered the porting of Well on the previous blogpost, I’m now going to show you the new stuff I’ve been working on. We thought it would be a great idea to show off the potential of Source 2 lighting using TF2 assets by changing Well into a night time variant. Here’s some screenshots of my progress: <img data-src='https://cdn.discordapp.com/attachments/879377966830878760/903699999920111696/arenawellnight_kaya_04.png' class='lozad' data-caption=''> <img data-src='https://cdn.discordapp.com/attachments/879377966830878760/903699988914274305/arenawellnight_kaya_01.png' class='lozad' data-caption=''> <img data-src='https://cdn.discordapp.com/attachments/879377966830878760/903699999441965066/arenawellnight_kaya_02.png' class='lozad' data-caption=''> <img data-src='https://cdn.discordapp.com/attachments/879377966830878760/903699998091403305/arenawellnight_kaya_03.png' class='lozad' data-caption=''></p>
+<p>This is not the final version. I’m really looking forward to what you think of this new environment for Well, and the minor details I’ve been adding to the map to make it feel a bit more alive!</p>
+</div>
+</section><section id="Back_to_Badlands">
+<div class="post_section popuppreview">
+<div class="post_section_title">Back to Badlands <a href="#Back_to_Badlands" onclick="CopyText('https://tfsource2.com/post/the-finer-details#Back_to_Badlands')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> KAYA</div>
+</div>
+<p>Something else I worked on these past months was my little Badlands themed scene, I’m quite proud of how it turned out. It also made us learn which environment lighting settings we should use for exterior scenes in this theme. It took quite a few tries and some hours of compiling but here it is!</p>
+<p><img data-src='https://cdn.discordapp.com/attachments/879377966830878760/903700002067582986/badlands_kaya_03.png' class='lozad' data-caption=''> <img data-src='https://cdn.discordapp.com/attachments/879377966830878760/903700000851234856/badlands_kaya_02.png' class='lozad' data-caption=''> <img data-src='https://cdn.discordapp.com/attachments/879377966830878760/903700001354551296/badlands_kaya_01.png' class='lozad' data-caption=''></p>
+</div>
+</section><section id="Thank_you_for_all_our_amazing_applicants">
+<div class="post_section popuppreview">
+<div class="post_section_title">Thank you for all our amazing applicants <a href="#Thank_you_for_all_our_amazing_applicants" onclick="CopyText('https://tfsource2.com/post/the-finer-details#Thank_you_for_all_our_amazing_applicants')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> TF:S2 Producers</div>
+</div>
+<p>We have received an overwhelming number of applications since we initially announced this project on our <a href='https://twitter.com/TeamFortressS2'>Twitter</a>. To be honest, we never expected to see such talent and diversity in our applicants.</p>
+<p>While we cannot accept nor reply to everyone due to the quantity of applicants, we're letting you know that you could still be considered in the future if we need more talent.</p>
+<p>Again, thank you to everyone who's applied to date. We've been overwhelmed by all the responses and feedback regarding our project. It is truly awesome to see the incredible response from the community and your passion for Team Fortress: Source 2.</p>
+</div>
+</section><section id="Eyes_to_the_future">
+<div class="post_section popuppreview">
+<div class="post_section_title">Eyes to the future... <a href="#Eyes_to_the_future" onclick="CopyText('https://tfsource2.com/post/the-finer-details#Eyes_to_the_future')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Waugh Gaming</div>
+</div>
+<p>Here’s a quick look ahead at one of the things we’ve been dying to show you. We’ll have more to share on this at a later date!</p>
+<p><img data-src='https://cdn.discordapp.com/attachments/902631949053624390/902632993074585700/Snow_Concept_1.13.png' class='lozad' data-caption='A snowy, desolate train line environment concept.'></p>
+</div>
+</section>
+<div>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="The Finer Details" data-url="https://tfsource2.com/post/the-finer-details" data-hashtags="tfs2" data-show-count="false">Tweet</a>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function CopyText(text) {
+        if (!navigator.clipboard) {
+            fallbackCopyTextToClipboard(text);
+            return;
+        }
+        navigator.clipboard.writeText(text).then(function () {
+            console.log('Async: Copying to clipboard was successful!');
+        }, function (err) {
+            console.error('Async: Could not copy text: ', err);
+        });
+    }
+
+    function fallbackCopyTextToClipboard(text) {
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+
+        // Avoid scrolling to bottom
+        textArea.style.top = "0";
+        textArea.style.left = "0";
+        textArea.style.position = "fixed";
+
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'successful' : 'unsuccessful';
+            console.log('Fallback: Copying text command was ' + msg);
+        } catch (err) {
+            console.error('Fallback: Oops, unable to copy', err);
+        }
+
+        document.body.removeChild(textArea);
+    }
+</script>
+</div>
+<footer>
+<a href="https://twitter.com/AmperSoftware" target="_blank">
+<div class="footer_logotype"><img src="../engine/applications/blog/templates/tfs2/assets/images/amper_logotype.svg?v=79" alt="Amper Software"></div>
+</a>
+<div class="footer_copyright">&copy; 2022 Amper Software. We are not afilliated with Valve.</div>
+<div class="footer_social">
+<a href="https://twitter.com/TeamFortressS2" target="_blank"><i class="mdi mdi-twitter"></i></a>
+<a href="https://discord.gg/tMnTsUsVjP" target="_blank"><i class="mdi mdi-discord"></i></a>
+<a href="https://steamcommunity.com/groups/ampersoftware" target="_blank"><i class="mdi mdi-steam"></i></a>
+</div>
+</footer>
+</div>
+</body>
+<script type="text/javascript">
+	new Parallax({
+		selector: "#background",
+		multiplier: 0.5
+	});
+
+	new PopupPreview({
+		popup: "#popup_preview",
+		container: ".media_container",
+		caption: ".caption_container"
+	});
+</script>
+<script>
+	//
+	// Lozad
+	//
+	const observer = lozad();
+	observer.observe();
+
+	//
+	// AjaxDocLoad
+	//
+	AjaxDocLoad.Register("#site_content");
+
+	AjaxDocLoad.onprechange(() => {
+		document.querySelector("#background").style.opacity = 0;
+	});
+
+	AjaxDocLoad.onpostchange(() => {
+		document.querySelector("#background").style.opacity = 1;
+		observer.observe();
+	});
+</script>
+<script>
+	function Sus() {
+
+		let susUrl = "/engine/applications/blog/templates/tfs2/assets/images/sus.webp?v=79";
+
+		document.querySelector(".banner_title").innerText = "Among";
+		DoMeme(susUrl);
+
+		new Audio("https://cdn.discordapp.com/attachments/843512666060619806/870744310952366150/amogusssusus.wav")
+			.play();
+	}
+
+	function Sap() {
+		DoMeme("https://thumbs.gfycat.com/DismalUnfortunateBurro-size_restricted.gif");
+
+		new Audio("https://cdn.discordapp.com/attachments/843512666060619806/871795497105522818/sapper_plant.wav")
+			.play();
+
+		let sap = new Audio(
+			"https://cdn.discordapp.com/attachments/843512666060619806/871795536792027246/sapper_timer.wav");
+		sap.loop = true;
+		sap.play();
+
+		setTimeout(() => {
+			new Audio("https://wiki.teamfortress.com/w/images/c/cf/Spy_laughevil02.wav").play();
+		}, 300);
+	}
+
+	function DoMeme(img) {
+		for (let el of document.querySelectorAll("*")) {
+
+			if (el.id == "popup_preview") continue;
+
+			if (el.tagName == "IMG") {
+				el.setAttribute("src", img);
+			} else {
+				el.style.backgroundImage =
+					`url(${img})`;
+				el.style.backgroundSize = "contain";
+			}
+		}
+	}
+</script>
+</html>

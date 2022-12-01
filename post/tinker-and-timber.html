@@ -1,0 +1,462 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/main.css?v=79">
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/fonts.css?v=79">
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/TFS2_Icons.css?v=79">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="../npm/%40mdi/font%405.9.55/css/materialdesignicons.min.css">
+<link href="../css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="../engine/applications/blog/templates/tfs2/assets/scripts/parallax_background.js?v=79" charset="utf-8"></script>
+<script src="../engine/applications/blog/templates/tfs2/assets/scripts/popup_preview.js?v=79" charset="utf-8"></script>
+<script src="../engine/core/templates/default/assets/scripts/API.js?v=79" charset="utf-8"></script>
+<script src="../engine/core/templates/default/assets/scripts/AjaxDocLoad.js?v=79" charset="utf-8"></script>
+
+<script type="text/javascript" src="../npm/lozad/dist/lozad.min.js"></script>
+
+<script async="" src="../gtag/js?id=G-5J0ZFCS7K3"></script>
+<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-5J0ZFCS7K3');
+	</script>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2416877417515654" crossorigin="anonymous"></script>
+
+<title>Tinker and Timber — TF: Source 2</title>
+<meta property="og:title" content="Tinker and Timber — TF: Source 2">
+<meta property="og:site_name" content="TF: Source 2">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/post/tinker-and-timber">
+<meta property="og:image" content="https://files.ampersoftware.com/2022/04/08/cp_domain_min.png">
+<meta property="og:description" content="This time the team outlines some major developments, including overhauled class, weapon and gamemode code, UI improvements and new character models.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:src" content="https://files.ampersoftware.com/2022/04/08/cp_domain_min.png">
+<meta name="twitter:site" content="@TeamFortressS2">
+<meta name="twitter:title" content="Tinker and Timber — TF: Source 2">
+<meta name="twitter:description" content="This time the team outlines some major developments, including overhauled class, weapon and gamemode code, UI improvements and new character models.">
+
+<link rel="apple-touch-icon" sizes="180x180" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/apple-touch-icon.png?v=79">
+<link rel="icon" type="image/png" sizes="32x32" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon-32x32.png?v=79">
+<link rel="icon" type="image/png" sizes="16x16" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon-16x16.png?v=79">
+<link rel="manifest" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/site.webmanifest?v=79">
+<link rel="mask-icon" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/safari-pinned-tab.svg?v=79" color="#ea9b26">
+<link rel="shortcut icon" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon.ico?v=79">
+<meta name="theme-color" content="#ea9b26">
+<meta name="msapplication-TileColor" content="#ea9b26">
+<meta name="msapplication-config" content="/engine/applications/blog/templates/tfs2/assets/images/favicon/browserconfig.xml?v=79">
+</head>
+<body>
+<div id="popup_preview">
+<div class="media_container"></div>
+<div class="caption_container"></div>
+</div>
+<div id="background"></div>
+<div id="core">
+<header>
+<div class="topbar">
+<div class="topbar_header_container">
+<div class="container flex header_wrapper">
+<div class="header_rect_logotype">
+<a href="../index.htm">
+<img src="../engine/applications/blog/templates/tfs2/assets/images/tfs2_rect_logotype.png?v=79" alt="Team Fortress: Source 2">
+</a>
+</div>
+<div class="topbar_center_navigation topbar_header_container topbar_navigation">
+<ul>
+<a href="../news.html">
+<li> <i class="tfs2i icon-blog"></i> News</li>
+</a>
+<a href="../about.html">
+<li> <i class="tfs2i icon-about"></i> About</li>
+</a>
+<a href="../team.html">
+<li> <i class="tfs2i icon-team"></i> Team</li>
+</a>
+</ul>
+</div>
+<div class="topbar_hamburger topbar_header_container" onclick="document.querySelector('#hamburger_menu').classList.toggle('open')">
+<i class="mdi mdi-menu"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="hamburger_menu topbar_navigation" id="hamburger_menu">
+<ul>
+<a href="../news.html">
+<li> <i class="tfs2i icon-blog"></i> Blog</li>
+</a>
+<a href="../about.html">
+<li> <i class="tfs2i icon-about"></i> About</li>
+</a>
+<a href="../team.html">
+<li> <i class="tfs2i icon-team"></i> Team</li>
+</a>
+</ul>
+</div>
+</header>
+
+<div id="site_content">
+<div class="banner">
+<div class="container">
+<div class="banner_title">Tinker and Timber</div>
+<div class="banner_tags">
+<div class="post_tag"><i class="mdi mdi-clock"></i> Friday, Apr 8th, 2022</div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/page_post.css?v=79">
+<style>
+    #background {
+        background-image: url(../2022/04/08/cp_domain_min.png);
+    }
+</style>
+
+<div class="page">
+<div class="separator"></div>
+<div class="content">
+<div class="container">
+<div class="section">
+<div class="section_content">
+<div class="section_static">
+<section id="Introduction">
+<div class="post_section popuppreview">
+<div class="post_section_title">Introduction <a href="#Introduction" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#Introduction')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Amper Team</div>
+</div>
+<p>Yet again the Amper team has been hard at work, chiselling Team Fortress: Source 2. Over the past two months we delivered some major improvements, including the creation of a Source 1 base with an accurate movement controller, overhauling our class, weapon and gamemode code, new high quality character models and UI improvements.</p>
+</div>
+</section><section id="Public_Playtesting">
+<div class="post_section popuppreview">
+<div class="post_section_title">Public Playtesting <a href="#Public_Playtesting" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#Public_Playtesting')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> KAYA</div>
+</div>
+<p>We decided to go a lot more public this month about our playtesting sessions, in fact, we didn’t hold a single playtest since early February and we felt like we needed to go bigger and stress test our game with a lot more people since dedicated servers are now supported in s&box.</p>
+<p>To accompany this, we have created a brand new <a href='https://github.com/AmperSoftware/TF-Source-2-Issues'>public issue tracker</a> on GitHub for people with s&box dev preview access to report bugs directly to us, this has greatly helped us finding a lot more bugs that we previously noticed and never really bothered to open issues on our private code repository, that ended up being forgotten about.</p>
+<p>With that said, if you already have s&box dev preview access and you’re interested in joining our playtests, consider joining our <a href='https://discord.gg/tfs2'>Discord Community</a> to get notified about them.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lnP2VXASvB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+</section><section id="Main_Menu">
+<div class="post_section popuppreview">
+<div class="post_section_title">Main Menu <a href="#Main_Menu" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#Main_Menu')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> CriticalFlaw, Moonly Days</div>
+</div>
+<p><h1>Moonly Days
+<p>If a developer wants to implement a pause menu into their game in s&box, Facepunch encourages them to use the Q key as its keybind. Traditionally, the pause menu is accessed using the ESC key. However, unfortunately we are unable to utilize this key as it is already used by s&box for its own pause menu, so we’ve had to stick with what we have.</p>
+<p>The pause menu in TF:S2 will be used for several things:</p>
+<p>- Access your inventory where you can change each class's loadout. (More on that later in this blog post.).<br> - Open the Settings menu, where you’ll be able to customize your TF:S2 experience with various options.<br> - Change team and change class.<br></p>
+<p>Down the line, when Facepunch gives us more tools to create Game Service features, we plan to also integrate achievements and stats into the pause menu.</p>
+<p><h1>CriticalFlaw
+<p>We want the menu to instantly feel familiar to players old and new players alike. The layout follows the familiar pattern of a logo at the top, containers with important buttons right below on the left, a taskbar at the bottom for utility buttons and the remaining two thirds of the screen for the background and character portrait. We’ve also laid down the initial groundwork for some of our more ambitious ideas such as customizable player profiles and animations as the player hover their cursor over menu elements or when transitioning between screens.</p>
+<p>We were able to port some of TF2’s CSS stylesheets, which enables us to quickly create visually pleasing and familiar screens. Though the menus may look basic now, serving only to make newly created functionalities presentable to the player, we'll continue to iterate, adding more flair and polish.</p>
+<p>Our design process starts with collaborating, documenting and iterating on ideas we come up with either in photoshop or on paper. When time comes to bring these ideas to life, typically when an associate feature is developed and needs to be presented to the player, we work with developers to make that happen.</p>
+<p>We often need to revise or cut back on our more ambitious ideas and implement what is actually necessary, otherwise we can lose focus and chase superfluous ideas that may lead nowhere. We document most of our ideas, which makes it easier for us to revisit them at a later time, when development shifts to focus on polishing the launch build. So, expect a lot of what you see today to change down the line.</p>
+<p><video data-src='https://files.ampersoftware.com/2022/04/08/main_menu.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+</h1></h1></div>
+</section><section id="Improved_Chat">
+<div class="post_section popuppreview">
+<div class="post_section_title">Improved Chat <a href="#Improved_Chat" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#Improved_Chat')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> cheddZy</div>
+</div>
+<p>When redesigning the in-game chat, we mainly wanted to ensure the user experience wasn’t really anything too different from what we know, but still improved, such as the ability to change between sending to global chat and team chat on the fly (after we faced an issue with keybinding as s&box is limited in the amount of keys we may utilize, hence the use of “TAB” to switch between chat modes, see gif below!), as well as selecting a newer yet familiar typeface and improving on visual clarity while typing or reading others’ messages.</p>
+<p>There’s definitely more to come to enhance the communicative experience for TF:S2, but our new chat is a fresh start from the original classic Source 1 chat box.</p>
+<p><video data-src='https://files.ampersoftware.com/2022/04/08/chat.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+</div>
+</section><section id="Engineer_Model_Rework">
+<div class="post_section popuppreview">
+<div class="post_section_title">Engineer Model Rework <a href="#Engineer_Model_Rework" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#Engineer_Model_Rework')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Manndarinchik</div>
+</div>
+<p>The main goal of this rework was to generally improve the quality of the model. This meant increasing the poly count and repainting textures in a higher resolution. PC hardware has become significantly more powerful since TF2 originally released back in 2007. Source 2 makes the best of this extra power, allowing our programmers and artists to create a more optimized and visually detailed experience.</p>
+<p>The hardest part of reworking the Engineer model was getting the silhouette right. It took quite some time to find a good balance between the model keeping it’s characteristic toon style and looking too uncannily realistic. When I received feedback on some of the changes I noticed that everyone had their own idea of the aforementioned perfect balance, so I tried my best to just preserve the parts that are purposefully sharp (e.g. cloth folds, defining silhouette features), while also making the whole model less low-poly overall. The model was then re-unwrapped to make textures more space-efficient. Naturally, a new UV layout required new textures.</p>
+<p>There’s nothing interesting about the new color texture that’s worth talking about here, though there is one trick with remaking normal maps which Alaxe showed me that I want to share here:</p>
+<p>If you don’t know what normal mapping is; it’s basically a way to add fake detail on the surface of a model using textures (you’ve likely seen one before - they’re usually a light-purple). This detail could be achieved with a higher poly version of the same model, but then we’d be using millions of polygons which would seriously hamper performance, however normal mapping provides us with a convenient, low cost alternative. We achieve this through a process called ‘baking’.</p>
+<p>The basics of normal mapping converting these textures back into topological detail by converting them into height maps and using those to displace subdivided geometry. The resulting mesh is very rough because of image compression, but it can be used as a base for a new normal map. Engi’s original 1k heavily compressed normal textures were “restored” in 2k using this method.</p>
+<p>I’m learning as I go here, so naturally I may change some things and make further improvements to the model in the future. But for now I’m quite happy with how it turned out!</p>
+<p><video data-src='https://files.ampersoftware.com/2022/04/08/engineer_dance.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+</div>
+</section><section id="Movement_Controller">
+<div class="post_section popuppreview">
+<div class="post_section_title">Movement Controller <a href="#Movement_Controller" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#Movement_Controller')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p>TF2's movement is very unique and complicated. It consists of a wide range of systems that need to work together in order to provide a smooth experience to the player. Even the slightest thing that works differently compared to the live game may completely change the “feel” of the game.</p>
+<p>This time I took some time to recreate the original Team Fortress 2 movement controller in order to make our game feel better. This was a huge undertaking but nonetheless a very fun adventure that taught me a lot about how movement works in Source games.</p>
+<p>s&box has a basic movement controller that comes with the game itself. It is good enough for 99% of the game modes that are developed for s&box. To my knowledge, it was ported from the official Valve’s Source SDK repository, but something about it just didn’t feel right when used in our project. Either Facepunch has made some adjustments to how the controller works, or just didn’t finish it - we came to a conclusion that we cannot use it in TF2 and we need to make our own controller.</p>
+<p>So I started by looking at the Source SDK movement code. I never really worked with Source movement before, so I was overwhelmed by the amount of complex systems that Source controller has. For a few days I’ve done nothing but just read through the code and try to understand how it works. Eventually I understood that I needed to start doing something. I started by rebuilding the walk movement - aka what players use 99% of the time to navigate within the level. The way how I worked is that I copied the C++ code from the SDK and tried translating it into C#, while also trying to understand what exactly the code does and why. I was also assisted by the fact that the s&box controller was also open source and I could use its translation to understand what exactly is going on in some parts of the code.</p>
+<p>Eventually I got something, it worked. With enough trial and error I got the locomotion working pretty much the same way it does in any Source game. It already started to feel better. I got a little more comfortable and started gradually adding more systems to the code: jumping, ducking, gravity, air strafing, noclip movement, water movement, etc. It was smooth sailing from there.</p>
+<p>Of all systems that are in the controller, I think that ducking deserves its own special mention. After I ported over its code into C# I understand that it’s very overcomplicated and can be remade with a lot less code. Which is what I did. I felt a lot more comfortable with making my own changes to the system, because at that point I had a lot more knowledge on what piece of code does and why it is there. The result is that I completely overhauled the ducking algorithm by making it feature a lot less code, but function exactly the same.</p>
+<p>The results of this little adventure are the following: I have learnt a lot more about how movement in Source games work, this is something I wanted to do for a while now, and I got a perfect opportunity now to actually do it. And now we have a more or less exact copy of the movement controller seen in Source games and TF2 specifically. And yes, that means that Source movement quirks that everyone loves, like trimping or surfing are preserved and work almost exactly the same as they do in live.</p>
+</div>
+</section><section id="New_Gamemode_System">
+<div class="post_section popuppreview">
+<div class="post_section_title">New Gamemode System <a href="#New_Gamemode_System" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#New_Gamemode_System')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p>Gamemodes is something I had to revisit a lot over the time working on the project. I tried multiple approaches on how to make them work, but while all of them had some benefits over other approaches, they were overshadowed by their downsides which could cause issues in the long run.</p>
+<p>Previously, I talked about making a gamemode system based on tf_gamemode_* entities. The gist of this system is that every gamemode in the game is programmed in its own gamemode controller entity. So if you wanted to make a CTF map, you had to put the tf_gamemode_ctf entity on your map and then put the flags / capture zones. I ultimately decided to scrap this idea because I realized that this makes mappers have less control over how they want their maps to operate and makes hybrid gamemodes technically impossible because, by the rules of this system, each level can have only one gamemode entity.</p>
+<p>Then I have taken a look at how CS:GO handles game modes. From what I understood by looking at the Valve Developer Wiki, the game mode is not defined in the level itself but rather by a few special console variables that define what game type the server wants to run. At first I was excited to implement this system in TF:S2, because I thought that such a system could make maps be game mode agnostic, allowing the server operator to choose what gamemode they want to play on a map without having different gamemode variations of the same level. But then I realized that TF2 game modes are much more complex than just that. A lot of the game modes rely on preplaced objective entities on the map in order to work, so again, I decided to scrap this system.</p>
+<p>I was still thinking about the idea of allowing levels to support multiple game modes at once though… Think of Sawmill map from TF2, but instead of having different variations of the same map for each game mode (koth_sawmill, arena_sawmill, ctf_sawmill) you have only one map and then server operator decides what game mode they want to play by changing some server console variable.</p>
+<p>By this time, I decided to switch back to the old TF2 way of doing gamemodes with tf_logic entities that mappers need to add to alter the vanilla game rules. But this time I had an idea of allowing the mappers to place multiple logic entities on the map and then the server operator can choose which one to make active on each round by changing the aforementioned console variable. If a special gamemode requires some unique map layout changes, those can be changed by mapper by manually disabling props on the map to block or unblock special paths and routes depending on what gamemode is played. Unfortunately making this kind of system turned out to be a lot more complicated than i thought, different game modes might have different balancing rules, spawn conditions which need to be transitioned smoothly when game logic is changed. I have decided to put this idea on hold for now, in favor of finishing up other parts of the game. But I consider revisiting it one day to give this idea another try.</p>
+<p><img data-src='https://files.ampersoftware.com/2022/04/08/gamemodes.png' class='lozad' data-caption=''></p>
+</div>
+</section><section id="Original_Viewmodels">
+<div class="post_section popuppreview">
+<div class="post_section_title">Original Viewmodels <a href="#Original_Viewmodels" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#Original_Viewmodels')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Seal</div>
+</div>
+<p>Over the past month I’ve been working with Moonly on porting and restoring the original viewmodel system used in the release version of Team Fortress 2 and Left 4 Dead. It’s important that you know the differences between the released TF2’s system, L4D’s system and the system used in Live TF2.</p>
+<p>In release TF2 the viewmodels had the classes’ arms pre-applied in each viewmodel while in L4D Valve couldn’t do this with their 4 unique survivors so to get around this problem they built a system that could bone merge each of the survivor’s arms onto each weapon viewmodel to save resources, this system would be later used in CS:GO. In Live TF2 Valve decided since a lot of the animations would be re-used for other weapons it would be best to bake the animations into all the classes’ arm models then merge the weapons onto the arms, It’s functionally the opposite of L4D’s system.</p>
+<p>For TF:S2 we wanted to look back at all of these approaches and give our developers the choice between them. Our reasoning for bringing back these systems is to allow more creative possibilities and allow for easier control for each viewmodel, for example, the iconic “Randomizer” gamemode could utilize the L4D’s system to display proper viewmodels with any classes’ arms applied, while the system used Live TF2 can be used for reskins.</p>
+<p><img data-src='https://files.ampersoftware.com/2022/04/08/viewmodel.png' class='lozad' data-caption=''></p>
+</div>
+</section><section id="Spray_Packs">
+<div class="post_section popuppreview">
+<div class="post_section_title">Spray Packs <a href="#Spray_Packs" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#Spray_Packs')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Narklos</div>
+</div>
+<p>One of the core experiences of TF2 is taunting or spraying after a kill to truly assert your dominance and demonstrate to the person you just killed that, yes, you are the superior gamer, unparalleled in all aspects. Totally.</p>
+<p>In accordance with this, I began to create a series of fun spray packs, unique to each class. Each pack has twelve sprays, with more planned to be added in future. I’d also spoken with some of you in the Discord server for ideas on what packs you’d all like to see, too. Deciding on how to make the sprays stand out against the maps was a challenge, due to the smoother lighting system that I worried might obscure the sticker. Eventually, I settled on a cute, bubbly style with bold colors to really make it pop out, sort of like the style I used when designing the sprites for the website. So, when you’re on a rampage on the server or simply want to say hello to another player, you can rest assured that other players can see it!</p>
+<p>And no, you won’t be subjected to any weird community server sprays! Woohoo!</p>
+<p><img data-src='https://files.ampersoftware.com/2022/04/08/spray_bg.png' class='lozad' data-caption=''></p>
+</div>
+</section><section id="Spectator__Freeze_Cam">
+<div class="post_section popuppreview">
+<div class="post_section_title">Spectator & Freeze Cam <a href="#Spectator__Freeze_Cam" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#Spectator__Freeze_Cam')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p>During the playtests that we have held, we realized that when you die, there's not much you can do. You were stuck looking at your own corpse for the entire time until you were respawned. And if we played something like Arena mode, you were stuck looking at your own corpse for pretty much the entire remaining time of the round.</p>
+<p>This needed to be solved, so I started remaking the spectator mode. Thankfully the code behind the spectator mode is available in the public Source SDK, which I have taken a look at to understand how it works internally. After that I started making my own implementation of the spectator mode. After this was done, the player’s experience during playtests have greatly improved, since now they were able to still observe the course of the match even if they weren’t able to participate in it.</p>
+<p>It is also worth mentioning that deathcam and freezecam seen in TF2, is also technically part of the spectator system. So I've decided to take a shot at reimplementing it as well. Of course not without interesting quirks along the way. Turns out that because of the way that I coded the freezecam, it was able to target any entity that so happened to kill you. Thus resulting in some hilarious moments when the camera menacingly zoomed into the nearby prop that killed you.</p>
+<p><video data-src='https://files.ampersoftware.com/2022/04/08/sbox-dev_WGgq5ZpwhB.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+</div>
+</section><section id="Finishing_Medic">
+<div class="post_section popuppreview">
+<div class="post_section_title">Finishing Medic <a href="#Finishing_Medic" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#Finishing_Medic')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days, Ivory</div>
+</div>
+<p>Over the course of our development we continuously refine the gameplay of each class. This time we have decided to take a shot at finishing up the Medic class.</p>
+<p><h1>Moonly Days
+<p>I have started by spending some time learning how healing works in TF2: how much health per second is being given to the player, how quick does it happen, under what conditions the healing rate is modified. This information has helped me greatly to recreate this system in our project. I started by building the code for the Medigun. Medigun heals their target with a rate that is defined by how much time has passed since the target has last taken damage. This is what the official documentation for Team Fortress 2 calls healing rate ‘in combat’ and ‘out of combat’. The basic healing rate for the Medi Gun is 24 HP/s, which then gets ramped up to 72 HP/s if the target has last taken damage 10 or more seconds ago.</p>
+<p>The ubercharge build rate, however, does not depend on how much health you give to the patient. It builds up at a constant rate, until the target’s health reaches 95% of the max overheal amount of the healed class. In that case the build rate is halved.</p>
+<p>At the moment, Medic is able to successfully heal their teammate, build up the ubercharge and release it when needed. All the visual effects are applied accordingly, however the Ubercharge itself does not have damage blocking functionality just yet. We plan on tackling this issue at a later date.</p>
+<p><h1>Ivory
+<p>Added during the Meet Your Match update was the ability for Medic to match the speed of any patient with a higher base movement speed. This was a pretty important change as it was difficult for medics to keep up with faster classes like Scout unless they were using the Quick-Fix. As of now, this only benefits Scout but I feel it’s best to have this functionality in place in case we end up giving other classes the ability to increase their movement speed (e.g., Eyelander for Demoman).</p>
+<p>As for Ubercharge, I implemented a flashing mechanic loosely based on the same mechanic present in TF2: the more players under the effects of your Ubercharge, the faster your charge will deplete. At one or less patients, the UberCharge will last a total of 8 seconds with the duration decreasing by half a second for every additional player under the effect. This only persists for as long as you have more than one player being Ubercharged; if you Ubercharge one player and then switch to another, the charge will deplete faster until the effect fully wears off of the first patient. After it wears off, your charge will begin to deplete at the normal rate again.</p>
+</h1></h1></div>
+</section><section id="Heatmaps">
+<div class="post_section popuppreview">
+<div class="post_section_title">Heatmaps <a href="#Heatmaps" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#Heatmaps')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> qualitykk</div>
+</div>
+<p>Since most of the maps we are currently working on still need their layout tested and the new Hammer addon system on the horizon, we decided that we could definitely use a system to help the map development process.</p>
+<p>One of the most time consuming phases of playtesting a Source 1 map was going through the recorded demo (if there even was one) and trying to get a feeling for the role certain parts of the maps had in gameplay. This method of reviewing playtests is inaccurate since you can't really remember all player positions between reviewing the demo and going into Hammer to change the map based on the data.</p>
+<p>The plan for helping this is to record that data into an easily readable format and display it in Hammer as heatmaps, in the future this will include a lot of data that can be saved ranging from just a player’s position to building placement spots, but for now it just records deaths since that is by far the most important data point. However, since the Hammer add-on possibilities were still limited we decided on just displaying them in-game for now.</p>
+<p><img data-src='https://files.ampersoftware.com/2022/04/08/heatmaps.png' class='lozad' data-caption=''></p>
+</div>
+</section><section id="Airblast">
+<div class="post_section popuppreview">
+<div class="post_section_title">Airblast <a href="#Airblast" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#Airblast')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Ivory</div>
+</div>
+<p>One of the more important things we need to finish with Pyro is the airblast mechanic. Airblast will behave in TF:S2 very similarly to how it does in TF2. Enemies will be pushed back, teammates will be extinguished, and projectiles from the opposing team will be reflected. As of writing this post, only the normal push back on enemies and extinguishing teammates is functioning. I have the general setup for projectiles prototyped but the airblast is currently unable to "hit" any projectiles, so it simply does not interact with them yet.</p>
+<p>As for what is functioning; airblasting enemies will push them backwards based on the Pyro's view angles and their direction from the Pyro's origin. The airblast functionality is a bit of a hybrid between pre-Jungle Inferno and post-Jungle Inferno: post-Jungle Inferno removed the field of view check on airblast which results in players directly behind the Pyro being hit by the airblast. I included a field of view check to prevent this, so airblasting in TF:S2 will have the checks that pre-Jungle Inferno had but will have the force push of post-Jungle Inferno. While airblasting enemy players will push them back, Pyro can also airblast teammates to extinguish them just as it happens in TF2. Extinguishing a teammate will remove any afterburn and provide 20 health to the Pyro.</p>
+</div>
+</section><section id="Inventory">
+<div class="post_section popuppreview">
+<div class="post_section_title">Inventory <a href="#Inventory" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#Inventory')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p>TF2 wouldn’t be itself without the unlockable weapons that the live game features. Some weapons are just too iconic to be left out. At the moment in TF:S2, all classes are only allowed to use stock weapons. This means that potential playstyles that everyone loves are left out.</p>
+<p>To address this inconvenience, we have decided to preserve some of the official weapons in our game as well. However, even if we add unlockable weapons to the game, there is no way to choose the weapon you wish to play with. To address this, I've started doing some experiments about making an Inventory system for TF:S2.</p>
+<p>Before I start explaining what I did, I need to stress something. In TF2, the items that a user owns are stored on Valve’s official TF2 item servers. It manages the loadouts, backpacks as well as all item permutations. For TF:S2, at least for now, we chose not to feature any backend integration or remote item storages. Therefore all the non default items are going to be available right away and loadout information will be stored in the game's local files. This might change in the future, but it’s what we’ve chosen to do right now.</p>
+<p>So now that I got that cleared, let me explain how I did it. In s&box, all games have access to data storage. This allows the game to keep specific player information between sessions, sort of like what cookies are used for in browsers. We are using this data storage to remember the player’s chosen loadout and give players the weapons they want to play with when they join a game. In order to achieve this, the server does a few things: when the player is being spawned for the first time, the server sends a message to the client. Client’s game receives this message and understands that now it needs to read the loadout data from the file storage and send it back to the server ASAP. Client sends a response message to the server that contains the loadout information which server receives and gives the correct items to the player in question. And then the server caches it, so it doesn’t need to request this information every time the player respawns. Right until the point when the player decides to update their loadout.</p>
+<p>To change your loadout, you must open the “Items” page from the pause menu. There you can select the class you want to modify, then the slot and then choose the item for that class and slot. After you’ve done that, the client sends a message to the server saying that their loadout was modified and whatever the server has in its cache for it is now invalid and cannot be used. The server understands this and sends a loadout update request again, repeating what it did before when the player spawned for the first time.</p>
+<p>If, for whatever reason loadout information is corrupted, or failed to be transmitted, the server assumes that the client doesn’t have any items equipped, but still tries to fetch this information every now and then until it gets a proper response.</p>
+<p><video data-src='https://files.ampersoftware.com/2022/04/08/sbox-dev_RI4CAzpgUK.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+</div>
+</section><section id="What_weapons_will_TFS2_have_on_launch">
+<div class="post_section popuppreview">
+<div class="post_section_title">What weapons will TF:S2 have on launch? <a href="#What_weapons_will_TFS2_have_on_launch" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#What_weapons_will_TFS2_have_on_launch')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p>To follow up on the previous segment, having an inventory system allows us to expand our game in a new direction. We are now able to create different play styles for each class and allow players to play with non default weapons if they choose to. This does lead to a very fair set of questions, like “what items will TF:S2 feature on launch?” and “will it feature any original weapon concepts?”.</p>
+<p>The answer to these questions is we haven’t decided yet. It’s a very touchy and subjective topic that we want to take our time thinking about how to handle it right. We don’t want to leave out the interesting weapon mechanics that form TF2 that it is today, but at the same time, we don’t want to be forced to recreate every single possible weapon gimmick that exists in the live game, because that is a huge task, that might not be worth the hustle, considering that not every weapon in the game is used on a consistent basis.</p>
+<p>At the same time there are some weapons in live TF2 that we feel must be recreated to be able to showcase certain game mechanics in our game to allow you to compare it with the live TF2. A big example of this is the demoknight playstyle. We want you to be able to compare how charging movement feels in our game and therefore implementing this weapon is essential to our experience.</p>
+<p>We will make sure to update you on this topic whenever we have any new information we can share.</p>
+</div>
+</section><section id="Conclusion">
+<div class="post_section popuppreview">
+<div class="post_section_title">Conclusion <a href="#Conclusion" onclick="CopyText('https://tfsource2.com/post/tinker-and-timber#Conclusion')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Amper Team</div>
+</div>
+<p>The finish line draws ever near. Everything in our recent playetest felt a lot closer to what a classic TF2 match feels like.</p>
+<p>Our plans for the coming months include further polishing of the overall experience, adding some more core gamemodes, extending our work on custom character shaders, building out more playable maps, voicelines, Engineer build, Spy disguises, and more weapons.</p>
+<p>Thank you for reading and for your support of this project. It means the world to us!</p>
+</div>
+</section>
+<div>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Tinker and Timber" data-url="https://tfsource2.com/post/tinker-and-timber" data-hashtags="tfs2" data-show-count="false">Tweet</a>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function CopyText(text) {
+        if (!navigator.clipboard) {
+            fallbackCopyTextToClipboard(text);
+            return;
+        }
+        navigator.clipboard.writeText(text).then(function () {
+            console.log('Async: Copying to clipboard was successful!');
+        }, function (err) {
+            console.error('Async: Could not copy text: ', err);
+        });
+    }
+
+    function fallbackCopyTextToClipboard(text) {
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+
+        // Avoid scrolling to bottom
+        textArea.style.top = "0";
+        textArea.style.left = "0";
+        textArea.style.position = "fixed";
+
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'successful' : 'unsuccessful';
+            console.log('Fallback: Copying text command was ' + msg);
+        } catch (err) {
+            console.error('Fallback: Oops, unable to copy', err);
+        }
+
+        document.body.removeChild(textArea);
+    }
+</script>
+</div>
+<footer>
+<a href="https://twitter.com/AmperSoftware" target="_blank">
+<div class="footer_logotype"><img src="../engine/applications/blog/templates/tfs2/assets/images/amper_logotype.svg?v=79" alt="Amper Software"></div>
+</a>
+<div class="footer_copyright">&copy; 2022 Amper Software. We are not afilliated with Valve.</div>
+<div class="footer_social">
+<a href="https://twitter.com/TeamFortressS2" target="_blank"><i class="mdi mdi-twitter"></i></a>
+<a href="https://discord.gg/tMnTsUsVjP" target="_blank"><i class="mdi mdi-discord"></i></a>
+<a href="https://steamcommunity.com/groups/ampersoftware" target="_blank"><i class="mdi mdi-steam"></i></a>
+</div>
+</footer>
+</div>
+</body>
+<script type="text/javascript">
+	new Parallax({
+		selector: "#background",
+		multiplier: 0.5
+	});
+
+	new PopupPreview({
+		popup: "#popup_preview",
+		container: ".media_container",
+		caption: ".caption_container"
+	});
+</script>
+<script>
+	//
+	// Lozad
+	//
+	const observer = lozad();
+	observer.observe();
+
+	//
+	// AjaxDocLoad
+	//
+	AjaxDocLoad.Register("#site_content");
+
+	AjaxDocLoad.onprechange(() => {
+		document.querySelector("#background").style.opacity = 0;
+	});
+
+	AjaxDocLoad.onpostchange(() => {
+		document.querySelector("#background").style.opacity = 1;
+		observer.observe();
+	});
+</script>
+<script>
+	function Sus() {
+
+		let susUrl = "/engine/applications/blog/templates/tfs2/assets/images/sus.webp?v=79";
+
+		document.querySelector(".banner_title").innerText = "Among";
+		DoMeme(susUrl);
+
+		new Audio("https://cdn.discordapp.com/attachments/843512666060619806/870744310952366150/amogusssusus.wav")
+			.play();
+	}
+
+	function Sap() {
+		DoMeme("https://thumbs.gfycat.com/DismalUnfortunateBurro-size_restricted.gif");
+
+		new Audio("https://cdn.discordapp.com/attachments/843512666060619806/871795497105522818/sapper_plant.wav")
+			.play();
+
+		let sap = new Audio(
+			"https://cdn.discordapp.com/attachments/843512666060619806/871795536792027246/sapper_timer.wav");
+		sap.loop = true;
+		sap.play();
+
+		setTimeout(() => {
+			new Audio("https://wiki.teamfortress.com/w/images/c/cf/Spy_laughevil02.wav").play();
+		}, 300);
+	}
+
+	function DoMeme(img) {
+		for (let el of document.querySelectorAll("*")) {
+
+			if (el.id == "popup_preview") continue;
+
+			if (el.tagName == "IMG") {
+				el.setAttribute("src", img);
+			} else {
+				el.style.backgroundImage =
+					`url(${img})`;
+				el.style.backgroundSize = "contain";
+			}
+		}
+	}
+</script>
+</html>

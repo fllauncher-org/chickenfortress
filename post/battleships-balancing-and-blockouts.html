@@ -1,0 +1,473 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/main.css?v=79">
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/fonts.css?v=79">
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/TFS2_Icons.css?v=79">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="../npm/%40mdi/font%405.9.55/css/materialdesignicons.min.css">
+<link href="../css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="../engine/applications/blog/templates/tfs2/assets/scripts/parallax_background.js?v=79" charset="utf-8"></script>
+<script src="../engine/applications/blog/templates/tfs2/assets/scripts/popup_preview.js?v=79" charset="utf-8"></script>
+<script src="../engine/core/templates/default/assets/scripts/API.js?v=79" charset="utf-8"></script>
+<script src="../engine/core/templates/default/assets/scripts/AjaxDocLoad.js?v=79" charset="utf-8"></script>
+
+<script type="text/javascript" src="../npm/lozad/dist/lozad.min.js"></script>
+
+<script async="" src="../gtag/js?id=G-5J0ZFCS7K3"></script>
+<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-5J0ZFCS7K3');
+	</script>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2416877417515654" crossorigin="anonymous"></script>
+
+<title>Battleships, Balancing and Blockouts — TF: Source 2</title>
+<meta property="og:title" content="Battleships, Balancing and Blockouts — TF: Source 2">
+<meta property="og:site_name" content="TF: Source 2">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/post/battleships-balancing-and-blockouts">
+<meta property="og:image" content="/engine/applications/blog/templates/tfs2/assets/images/post4_bg_1.jpg?v=79">
+<meta property="og:description" content="Dive in to learn more about how the Amper team is faithfully recreating Team Fortress 2 in Source 2. In this blog post, we cover a wide range of critical elements, including maps, UI, music and more!">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:src" content="/engine/applications/blog/templates/tfs2/assets/images/post4_bg_1.jpg?v=79">
+<meta name="twitter:site" content="@TeamFortressS2">
+<meta name="twitter:title" content="Battleships, Balancing and Blockouts — TF: Source 2">
+<meta name="twitter:description" content="Dive in to learn more about how the Amper team is faithfully recreating Team Fortress 2 in Source 2. In this blog post, we cover a wide range of critical elements, including maps, UI, music and more!">
+
+<link rel="apple-touch-icon" sizes="180x180" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/apple-touch-icon.png?v=79">
+<link rel="icon" type="image/png" sizes="32x32" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon-32x32.png?v=79">
+<link rel="icon" type="image/png" sizes="16x16" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon-16x16.png?v=79">
+<link rel="manifest" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/site.webmanifest?v=79">
+<link rel="mask-icon" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/safari-pinned-tab.svg?v=79" color="#ea9b26">
+<link rel="shortcut icon" href="../engine/applications/blog/templates/tfs2/assets/images/favicon/favicon.ico?v=79">
+<meta name="theme-color" content="#ea9b26">
+<meta name="msapplication-TileColor" content="#ea9b26">
+<meta name="msapplication-config" content="/engine/applications/blog/templates/tfs2/assets/images/favicon/browserconfig.xml?v=79">
+</head>
+<body>
+<div id="popup_preview">
+<div class="media_container"></div>
+<div class="caption_container"></div>
+</div>
+<div id="background"></div>
+<div id="core">
+<header>
+<div class="topbar">
+<div class="topbar_header_container">
+<div class="container flex header_wrapper">
+<div class="header_rect_logotype">
+<a href="../index.htm">
+<img src="../engine/applications/blog/templates/tfs2/assets/images/tfs2_rect_logotype.png?v=79" alt="Team Fortress: Source 2">
+</a>
+</div>
+<div class="topbar_center_navigation topbar_header_container topbar_navigation">
+<ul>
+<a href="../news.html">
+<li> <i class="tfs2i icon-blog"></i> News</li>
+</a>
+<a href="../about.html">
+<li> <i class="tfs2i icon-about"></i> About</li>
+</a>
+<a href="../team.html">
+<li> <i class="tfs2i icon-team"></i> Team</li>
+</a>
+</ul>
+</div>
+<div class="topbar_hamburger topbar_header_container" onclick="document.querySelector('#hamburger_menu').classList.toggle('open')">
+<i class="mdi mdi-menu"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="hamburger_menu topbar_navigation" id="hamburger_menu">
+<ul>
+<a href="../news.html">
+<li> <i class="tfs2i icon-blog"></i> Blog</li>
+</a>
+<a href="../about.html">
+<li> <i class="tfs2i icon-about"></i> About</li>
+</a>
+<a href="../team.html">
+<li> <i class="tfs2i icon-team"></i> Team</li>
+</a>
+</ul>
+</div>
+</header>
+
+<div id="site_content">
+<div class="banner">
+<div class="container">
+<div class="banner_title">Battleships, Balancing and Blockouts</div>
+<div class="banner_tags">
+<div class="post_tag"><i class="mdi mdi-clock"></i> Wednesday, Jan 5th, 2022</div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" href="../engine/applications/blog/templates/tfs2/assets/styles/page_post.css?v=79">
+<style>
+    #background {
+        background-image: url(../engine/applications/blog/templates/tfs2/assets/images/post4_bg_1.jpg);
+    }
+</style>
+
+<div class="page">
+<div class="separator"></div>
+<div class="content">
+<div class="container">
+<div class="section">
+<div class="section_content">
+<div class="section_static">
+<section id="Battleships_Balancing_and_Blockouts">
+<div class="post_section popuppreview">
+<div class="post_section_title">Battleships, Balancing and Blockouts <a href="#Battleships_Balancing_and_Blockouts" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#Battleships_Balancing_and_Blockouts')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Amper Team</div>
+</div>
+<p>In this new edition of the Team Fortress: Source 2 development blog post you’ll get to catch up on what the Amper Team has been up to during the past two months - boy have they been busy! Let’s dive right in!</p>
+</div>
+</section><section id="Team_Deathmatch">
+<div class="post_section popuppreview">
+<div class="post_section_title">Team Deathmatch <a href="#Team_Deathmatch" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#Team_Deathmatch')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p>In our previous blog post, I outlined Team Fortress: Source 2’s game mode system. Since then I have taken some time to polish it up and actually develop our first playable game mode - Team Deathmatch. The reason we chose to focus on TDM was our need for a game mode that allows us to test our systems in the broadest way possible.</p>
+<p>In a game as complex as Team Fortress 2, we believe that it is important to try to find as many edge cases of player interactions as we possibly can. Team Deathmatch is the easiest game mode that we could implement without diverting too many resources away from our other development efforts.</p>
+<p>As the main objective in Team Deathmatch is killing enemy players, instead of designing symmetrical levels that exist in vanilla Team Fortress 2, for TDM we decided to experiment with dynamic spawn points across the map to experiment with and, hopefully, resolve potential spawn camping and map control problems.</p>
+<p>We know that there may be some resistance to the idea of a Team Deathmatch mode in a Team Fortress game, especially given how the diverse set of classes and abilities are more suited to more complex PvP engagements. Based on the playtests that we conducted we learned that classes with higher damage outputs performed better, leaving support classes like Sniper, Spy, Medic and Engineer at a disadvantage.</p>
+<p>For now, we’re just using TDM as a playtesting environment to polish the experience as much as possible. However, down the line, I hope we’ll be able to tweak the rules of this game mode a bit to balance the gameplay for each class.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HG4C-b6dSwA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+</section><section id="Whos_winning_TDM_Score_UI">
+<div class="post_section popuppreview">
+<div class="post_section_title">Who’s winning? TDM Score UI <a href="#Whos_winning_TDM_Score_UI" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#Whos_winning_TDM_Score_UI')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Critical Flaw</div>
+</div>
+<p>When it came to designing the kill counter for TDM, we wanted it to look and feel unique yet familiar to the player. Taking inspiration from TF2’s Player Destruction mode and other games that feature TDM, our first concept had two stacked progress bars filling up horizontally with team logos on each side. Aligned progress bars gave a sense of urgency as teams raced to reach the kill limit. However, this first design was bulky, leaving an excess of unused space. <img data-src='https://user-images.githubusercontent.com/6818236/141709514-bac5b65c-675c-40d3-b7c5-117bea5c5497.png' class='lozad' data-caption=''></p>
+<p>Our second iteration had a rectangular container with vertical progress bars and a skull icon in the middle, indicative of the game mode being played. This design helped eliminate empty space and made the kill counts more prominent in high-intensity engagements, however, the rectangular container was too simple and the icon’s position only served to obscure progress bars being so close together. At this point, we knew we were onto something, but it just needed more iteration. <img data-src='https://user-images.githubusercontent.com/6818236/141709534-9b80e005-4aeb-471a-97fc-2bff4eaf9b30.png' class='lozad' data-caption=''></p>
+<p>Our third and current iteration has a frame resembling a winged medal with the gamemode icon in the middle and the wings being used for each team’s progression. This version made it easy to know, at a glance, how your team is doing. This winged design could also be used in other game modes where team scores need to be tracked. <img data-src='https://user-images.githubusercontent.com/6818236/142529339-1fcb6a61-5eda-4710-9dbd-432c7f99a8bc.png' class='lozad' data-caption=''></p>
+<p>While we’re happy with the current design, it’s possible (likely) that we’ll tweak or completely change the design later in development based on community feedback.</p>
+</div>
+</section><section id="Battleships">
+<div class="post_section popuppreview">
+<div class="post_section_title">Battleships! <a href="#Battleships" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#Battleships')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Quantum & Waugh Gaming</div>
+</div>
+<p><h1>Quantum - Level Designer As a mapper, I wanted to focus on what I was capable of doing with a layout in Source 2 that I would never be able to do properly in Source 1. Immediately, the idea of a battleship map became difficult to get out of my head. I attempted a similar idea using Source 1, but could never quite get it to where I wanted and only ended up with a blocky representation of a ship.
+<p>While it's technically possible to in Source 1, using models, it would be an unoptimized mess due to the way the engine calculates what needs to be rendered on your screen at any given moment. Source 2 gives us the freedom to create interesting shapes, such as a ship, without sacrificing performance. The goal is to push the new engine to create new interesting and detailed environments not previously possible, while staying faithful to Team Fortress 2's original artstyle.</p>
+<p><h1>Waugh - Environment Artist On the art side of things, I looked at this map as an opportunity to establish a new theme for both us and community mappers to use in their own work. The presence of a ship and the large number of man-made structures lends the map well to an industrial port theme. Due to the nature of the TDM gamemode, the whole map demands a neutral theme, meaning that none of the structures are owned by either team.
+<p><img data-src='https://i.ibb.co/6JxBrzV/battleship-quantumwaugh-01.png' class='lozad' data-caption=''> The map started off with quite a different style that didn’t quite fit the aforementioned design goals. So, I looked to sources of inspiration both in and outside of Team Fortress.</p>
+<p><img data-src='https://cdn.discordapp.com/attachments/871862201529565214/927304075874287716/R.png' class='lozad' data-caption=''> This work by the Precisionist artist Charles Sheeler provided a great deal of inspiration for us.</p>
+<p><img data-src='https://i.ibb.co/KKxsGVS/battleship-concept-waugh-01.png' class='lozad' data-caption=''> <img data-src='https://i.ibb.co/0t7x0GW/battleship-concept-waugh-02.png' class='lozad' data-caption=''> The next step was to take the existing block-out and do paint-overs of the level to transition it into this theming.</p>
+<p><img data-src='https://i.ibb.co/NL1ndWc/battleship-blockout-quantum-01.png' class='lozad' data-caption=''> Finally, Quantum started to implement my suggestions for the map in-editor.</p>
+<p>From here, we’ll continue to tweak and refine the look of the map until we have a polished environment we’re happy to ship (no pun intended.)</p>
+</h1></h1></div>
+</section><section id="Tilesets_-_What_are_they">
+<div class="post_section popuppreview">
+<div class="post_section_title">Tilesets - What are they? <a href="#Tilesets_-_What_are_they" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#Tilesets_-_What_are_they')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> KAYA</div>
+</div>
+<p>Tilesets are an extremely powerful tool included in Source 2’s Hammer: you place a mesh on your map, you set it as a tile mesh and boom, by just extruding the mesh, complex pre-defined geometry by the tileset will automatically match the tile mesh based on its size on the grid with the tile properties you choose.</p>
+<p>This will help mappers add easy details & repetitive patterns to their maps. With these, we can create tilesets for vents, pipes, fences, payload tracks and many more. They can not only contain models but also any type of entities or meshes, or just combined models into one tile. Tilesets can also have multiple styles & material sets by tile, thus allowing us to use different variations of the models into one tileset.</p>
+<p>On this gutters tileset, you can notice it has two different materials set & one specific style for the hole model. <video data-src='https://cdn.discordapp.com/attachments/902540604246990898/909886286742036550/XRaSn4mRVc.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption='Gutters Tileset'></video> <img data-src='https://cdn.discordapp.com/attachments/508677928503083050/927983749482840125/unknown.png' class='lozad' data-caption='Gutters Tileset'> <img data-src='https://cdn.discordapp.com/attachments/508677928503083050/927988103703035955/unknown.png' class='lozad' data-caption='Gutters Tileset'></p>
+<p>One very good example of complex tiles would be bakscratch’s catwalk tileset made for s&box: <img data-src='https://cdn.discordapp.com/attachments/508677928503083050/927991284503834744/unknown.png' class='lozad' data-caption=''></p>
+<p>I’ve also been working on a payload tracks tileset, which contains 3 different styles, with planks, without planks and with lights. <video data-src='https://cdn.discordapp.com/attachments/711021049344426086/910259263451070474/Fzkz12lE00.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video> <img data-src='https://cdn.discordapp.com/attachments/508677928503083050/927983932820058112/unknown.png' class='lozad' data-caption='Payload Tracks Tileset'> <img data-src='https://cdn.discordapp.com/attachments/508677928503083050/927988052066967582/unknown.png' class='lozad' data-caption='Payload Tracks Tileset'></p>
+<p>If you want a more in-depth look at Source 2 tilesets, I recommend checking <a href='https://wiki.facepunch.com/sbox/Tilesets'>this guide</a> or this short <a href='https://youtu.be/3ki67VLL0xI'>showcase video</a> with Half-Life: Alyx’s tilesets.</p>
+</div>
+</section><section id="U_I_and_UI">
+<div class="post_section popuppreview">
+<div class="post_section_title">U, I and UI <a href="#U_I_and_UI" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#U_I_and_UI')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Moonly Days</div>
+</div>
+<p>Something that is happening continuously throughout the development of the project is the improvement of the user interface. More HUD elements are added as the need for them appears. Overall, it’s been real fun for me to revisit the original TF2 HUD elements and recreate them in s&box.</p>
+<p>However there is one thing I want to highlight - menu overlays. This includes stuff like the Message of The Day welcome screen and the team & class selection menus. The interesting thing about these UI elements is the fact that the backgrounds that you see in those menus are not images, but actual 3D models. In order to implement those, I had to find a way to render a 3D model inside a 2D UI element.</p>
+<p>Luckily for us, s&box’s UI system supports this and I found out that the best way to achieve it would be to use SceneObjects. It’s a special system in s&box that allows you to create full independent 3D scenes that are contained inside a basic 2D panel.</p>
+<p>I began tinkering with the arrangement of the UI models on these scenes and tried to see which values would bring me as close as possible to the original TF2 UI look. In the end I think it looks quite close.</p>
+<p>There are, however, some problems with the ‘sceneobject’ system that are causing some issues beyond our control. For example, there are some weird issues with weapon bodygroups that are causing them to move completely differently relative to their intended location. We intend to communicate these issues with Facepunch so that, hopefully, they no longer cause issues like this.</p>
+<p>Here’s the preview of how the menu overlays look right now: <video data-src='https://cdn.discordapp.com/attachments/916068962725416960/928094860064469122/NU2yIF1cT1.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+</div>
+</section><section id="An_Artistic_Examination">
+<div class="post_section popuppreview">
+<div class="post_section_title">An Artistic Examination <a href="#An_Artistic_Examination" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#An_Artistic_Examination')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Waugh Gaming</div>
+</div>
+<p>When it comes to environments, our main goal is to create new spaces that adhere to Team Fortress 2’s classic style - industrial sites housing Cold War spy bases. We chose this style because we believe 2007-2009 to be the most artistically cohesive time in TF2’s dev cycle.</p>
+<p>I’ve done a lot of work to try and nail down both what makes the style function and what we can improve upon with our new themes and visual enhancements.</p>
+<p><img data-src='https://i.ibb.co/HYTKf3g/aesthetic-exploration-waugh-01.png' class='lozad' data-caption=''> <img data-src='https://i.ibb.co/k3Lv1Jk/aesthetic-exploration-waugh-02.png' class='lozad' data-caption=''> To help convey some of these ideas, I’ve created “mood pieces” showcasing the Team Fortress style, along with some possible new environments.</p>
+<p>To come up with these new environments, I’ve been studying both the artistic inspirations behind TF2’s distinctive style and it’s older official maps, while drawing upon my TF2 art experience. A clear influence behind these environments seems to be Precisionism, an early American art movement.</p>
+<p><img data-src='https://cdn.discordapp.com/attachments/902631949053624390/902631971333763102/Precisonism_1.jpg' class='lozad' data-caption=''> In this work by artist Charles Sheeler, one can not only see the level of simplification present in Team Fortress environments, but also an interesting setting for one. When picking the right setting for a map, there’s several factors to consider. Map geometry is a big one; a trainyard-adjacent brewery is going to be organized a lot differently to an alpine lumber camp.</p>
+<p>The gamemode and team presence are also major factors. For example, a red-rock canyon at sunset would work a lot better for an Attack/Defend map, in which the strong presence of red colors supports the overwhelming presence of RED team architecture throughout the locale. Finally, we’ve set the goal for ourselves to have each map feature a unique setting and/or industrial use. This ensures that no two maps look or feel the same, thus increasing the visual interest, memorability of every map, and providing community creators with clear examples of a variety of themes in-game.</p>
+<p>By doing this environment research, we’re able to develop a roster of unique and interesting themes for our custom maps that still follow the TF2 aesthetic.</p>
+</div>
+</section><section id="Throwing_Shaders">
+<div class="post_section popuppreview">
+<div class="post_section_title">Throwing Shade(rs) <a href="#Throwing_Shaders" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#Throwing_Shaders')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> rob5300</div>
+</div>
+<p><h1>Invulnerability Shader
+<p>Team Fortress 2 has many unique shader effects which we hope to reimplement. Recently, I’ve been working on the invulnerability shader used for the base medigun über. We are nearly finished with it and we want to share with you what we have so far!</p>
+<p><video data-src='https://thumbs.gfycat.com/ImpracticalSharpFanworms-mobile.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video> <i>(Render by PatrickJr in S2FM)</i></p>
+<p>TF2 uses a few special material features that s&box’s provided shaders lack, meaning we often have to rebuild these from scratch. For the invulnerability shader, these features are custom cubemap reflections, special highlights and normal map animations. When we see that a certain special material feature is used, we try to recreate its effect as best we can.</p>
+<p>N-cognito was able to update and touch up the reflection cubemaps from TF2, these are used to give the red and blue metallic shiny look to the player models. The special über class textures are also being updated by justyn, N-cognito and Beat Crazey. <img data-src='https://cdn.discordapp.com/attachments/896417452248944650/923353725274325062/invun_red_cubemap.png' class='lozad' data-caption=''></p>
+<p>These cubemaps are reflected off the player's model as if they were inside a cube with this texture, giving the distinct invulnerability look. <img data-src='https://cdn.discordapp.com/attachments/871862201529565214/925770956046229504/cubemap_demo.png' class='lozad' data-caption=''></p>
+<p>N-cognito also added some special view dependent shading similar to this to give the shader a more "metallic" look. The special highlights are also simple to add. These are the small white reflections that show when a part of the model is nearly or fully facing the camera, making the model look more glossy and shiny.</p>
+<p>Lastly, there are animated normal.These let us animate extra bumps and ridges on the models surface. This technique is used already in Half Life 2 for animated water. We use it to make the reflections warp and wobble, just like TF2 does.</p>
+<p><h1>Sniper Scope and Uber Screen Effect In addition to the player invulnerability effect, two new post processing effects have been iterated upon: the sniper scope and the screen effect when a player/medic is Ubered.
+<p><img data-src='https://cdn.discordapp.com/attachments/896417452248944650/913200941702971412/20211123224634_1.jpg' class='lozad' data-caption='Sniper Scope Shader'> <video data-src='https://i.imgur.com/kpcmFzj.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption='Uber Screen Effect'></video></p>
+</h1></h1></div>
+</section><section id="Recon">
+<div class="post_section popuppreview">
+<div class="post_section_title">Recon <a href="#Recon" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#Recon')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> qualitycont & Waugh Gaming</div>
+</div>
+<p><h1>qualitycont - Level Designer
+<p>The basic idea behind this Team Deathmatch map is simple: use pickup placement and height difference to encourage players to move into a certain area. The simplest way of doing this was to have a tiered map where players fight their way into a room at the peak of the map.</p><p>To avoid players simply being able to camp in this top position indefinitely, pickups are placed in such a way that encourages players to exit the room and scavenge for health packs and resources.</p>
+<p><h1>Waugh - Environment Artist
+<p>While we want each of our maps to have a different theme from one another, not all of these themes have to be new ones. Because we don’t plan on porting every map over, we can use some of the pre-existing styles for our new maps. For example, on Recon the gamemode still requires the use of neutral theming. The textbook neutral map in Live TF2 is, of course, Hydro. We’re using some of Hydro’s styling in Recon to create a neutral theme that doesn’t overlap too heavily with our other maps.</p>
+<p><img data-src='https://i.ibb.co/WHF8DPX/recon-concept-waugh-01.png' class='lozad' data-caption=''></p>
+</h1></h1></div>
+</section><section id="Dynamic_Grenade_Launcher">
+<div class="post_section popuppreview">
+<div class="post_section_title">Dynamic Grenade Launcher <a href="#Dynamic_Grenade_Launcher" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#Dynamic_Grenade_Launcher')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> [N-cognito]</div>
+</div>
+<p>When I started work on what was originally called the Procedural Grenade Launcher, I had no idea what I was doing. I had never coded in C# and was learning on the spot how to do a lot of things. To make up for this lack of knowledge, I tried replicating the original code used in Gun Mettle that makes the drum spin procedurally, while also trying to implement the dynamically adjusted reload animation you’ve seen in my previous tweets. While this initially worked, I ran into issue after issue, and eventually decided to scrap the entire thing in favor of a new system when I eventually revisited it. This new system uses animations built into the weapon itself rather than created through code, hence the change to Dynamic Grenade Launcher.</p>
+<p><video data-src='https://cdn.discordapp.com/attachments/737694370207236166/928332467629330462/9LH8Whb1QVlJTzbq.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+<p>Each system has its strengths and faults. Valve’s original system required NO animation and could create it on the fly, but was over-engineered like crazy to do so. This resulted in a ton of bugs when trying to implement it into Source 2. The new system I made instead uses a combination of code events and layered animations to replicate it while being much simpler and easier to manage. For comparison, the original code had triple the amount of lines and variables when compared to the new version.</p>
+<p>The system rewrite only took me a couple hours to come up with, but for some reason, the animation would play completely fine on my side, and for other users it would sometimes play a 5th animation cycle for the reload loop. We could not for the life of us figure out the issue until we investigated the reload times. It turns out that demoman’s reload time falls on a repeating decimal of 0.666…, which leads to the game sometimes rounding it up to 0.67 and other times rounding it down to 0.66. This is normally fine, except we were trying to replicate exact times, which showed it as 0.67 in ModelDoc (S2’s native model/animation tool), which ended with the animation occasionally being shorter than that actual reload time.</p>
+<p>Luckily, all the issues have now been sorted out, so look forward to seeing the Dynamic Grenade Launcher in TF:S2! It has been an interesting endeavor, to say the least. It was my introduction to TF:S2, Amper Software, Source 2, and C# coding all at once, and I think it’s nice to look back and see how I’ve grown as a coder the last couple of months.</p>
+</div>
+</section><section id="Soundtrack">
+<div class="post_section popuppreview">
+<div class="post_section_title">Soundtrack <a href="#Soundtrack" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#Soundtrack')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> MrModez Pineapple</div>
+</div>
+<p>I've joined the team to write some original music for the game. The idea was to compose original memorable tunes in Team Fortress 2 style for each official map. TF2 style is pretty easy to nail - it's mostly a combination of rock, jazz and orchestra. To kick things off, I wrote some demos, please take a listen:</p>
+<p>Demo #1 - Badlands Madness <div style='text-align: center;'><audio data-src='https://cdn.discordapp.com/attachments/853037820075442276/881800913570910268/Demo.mp3' class='lozad' controls="" data-caption=''></audio></div>
+<p>Demo #2 - Secret Lava Lair <div style='text-align: center;'><audio data-src='https://cdn.discordapp.com/attachments/853037820075442276/881800914615271456/LavaLair.mp3' class='lozad' controls="" data-caption=''></audio></div>
+<p>Demo #3 - Teufort Troubles <div style='text-align: center;'><audio data-src='https://cdn.discordapp.com/attachments/853037820075442276/881800917610004490/TeufortTroubles.mp3' class='lozad' controls="" data-caption=''></audio></div>
+<p>Demo #4 - Arena Well at Night <div style='text-align: center;'><audio data-src='https://cdn.discordapp.com/attachments/853037820075442276/903335909842374767/Nighty.mp3' class='lozad' controls="" data-caption=''></audio></div>
+<p>Demo #5 - The Shipment <div style='text-align: center;'><audio data-src='https://cdn.discordapp.com/attachments/902540604246990898/922510968976719902/TFSka.mp3' class='lozad' controls="" data-caption=''></audio></div>
+<p>Another thing I want to talk about is bringing more music into the gameplay. While playing a match of TF2, the original game doesn't play a lot of music - and that's probably for the best, since it would distract too much from the gameplay. For TF:S2 I want to expand the use of the music, but still in a way that won't be annoying for the players.</p>
+<p>I’m currently looking for ways to incorporate the music seamlessly into the gameplay, while working on the soundtrack for the TDM Hull, so hopefully by the next blog post I’ll have more info to share about that, please stay tuned! 🙃</p>
+</div>
+</section><section id="Conclusion">
+<div class="post_section popuppreview">
+<div class="post_section_title">Conclusion <a href="#Conclusion" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#Conclusion')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Amper Team</div>
+</div>
+<p>We’ve worked hard over the last two months to improve and overhaul the internal game code which will lead to a smoother gameplay experience. As a consequence of this, we’ve been holding regular internal playtests to further optimise, balance and get a feel for the game.</p>
+<p>If you haven’t already, feel free to join the official <a href='https://discord.com/invite/vRuXfPbV5G'>TF: Source 2 Discord Community</a>. You’ll be able to see live development updates, project news and chat with the community.</p>
+<p>Feedback about the project is also something we value a lot at Amper, if you have anything to tell us, please let us know on Discord or Twitter!</p>
+<p>As a final note, we at Amper would like to thank everyone for their support and enthusiasm throughout the final months of 2021 - your support motivates us as a team, further increasing our drive to create an authentic Team Fortress experience.</p>
+<p>Stay tuned - we can’t wait to show you what we have in store for 2022!</p>
+</div>
+</section><section id="Introduction">
+<div class="post_section popuppreview">
+<div class="post_section_title">Introduction <a href="#Introduction" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#Introduction')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> Amper Team</div>
+</div>
+<p>Yet again the Amper team has been hard at work, chiselling Team Fortress: Source 2. Over the past two months we delivered some major improvements, including the creation of a Source 1 base with an accurate movement controller, overhauling our class, weapon and gamemode code, new high quality character models and UI improvements.</p>
+</div>
+</section><section id="Public_Playtesting">
+<div class="post_section popuppreview">
+<div class="post_section_title">Public Playtesting <a href="#Public_Playtesting" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#Public_Playtesting')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> KAYA</div>
+</div>
+<p>We decided to go a lot more public this month about our playtesting sessions, in fact, we didn’t hold a single playtest since early February and we felt like we needed to go bigger and stress test our game with a lot more people since dedicated servers are now supported in s&box.</p>
+<p>To accompany this, we have created a brand new <a href='https://github.com/AmperSoftware/TF-Source-2-Issues'>public issue tracker</a> on GitHub for people with s&box dev preview access to report bugs directly to us, this has greatly helped us finding a lot more bugs that we previously noticed and never really bothered to open issues on our private code repository, that ended up being forgotten about.</p>
+<p>With that said, if you already have s&box dev preview access and you’re interested in joining our playtests, consider joining our <a href='https://discord.gg/tfs2'>Discord Community</a> to get notified about them.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lnP2VXASvB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+</section><section id="Main_Menu">
+<div class="post_section popuppreview">
+<div class="post_section_title">Main Menu <a href="#Main_Menu" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#Main_Menu')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> CriticalFlaw, Moonly Days</div>
+</div>
+<p><h1>Moonly Days
+<p>If a developer wants to implement a pause menu into their game in s&box, Facepunch encourages them to use the Q key as its keybind. Traditionally, the pause menu is accessed using the ESC key. However, unfortunately we are unable to utilize this key as it is already used by s&box for its own pause menu, so we’ve had to stick with what we have.</p>
+<p>The pause menu in TF:S2 will be used for several things:</p>
+<p>- Access your inventory where you can change each class's loadout. (More on that later in this blog post.).<br> - Open the Settings menu, where you’ll be able to customize your TF:S2 experience with various options.<br> - Change team and change class.<br></p>
+<p>Down the line, when Facepunch gives us more tools to create Game Service features, we plan to also integrate achievements and stats into the pause menu.</p>
+<p><h1>CriticalFlaw
+<p>We want the menu to instantly feel familiar to players old and new players alike. The layout follows the familiar pattern of a logo at the top, containers with important buttons right below on the left, a taskbar at the bottom for utility buttons and the remaining two thirds of the screen for the background and character portrait. We’ve also laid down the initial groundwork for some of our more ambitious ideas such as customizable player profiles and animations as the player hover their cursor over menu elements or when transitioning between screens.</p>
+<p>We were able to port some of TF2’s CSS stylesheets, which enables us to quickly create visually pleasing and familiar screens. Though the menus may look basic now, serving only to make newly created functionalities presentable to the player, we'll continue to iterate, adding more flair and polish.</p>
+<p>Our design process starts with collaborating, documenting and iterating on ideas we come up with either in photoshop or on paper. When time comes to bring these ideas to life, typically when an associate feature is developed and needs to be presented to the player, we work with developers to make that happen.</p>
+<p>We often need to revise or cut back on our more ambitious ideas and implement what is actually necessary, otherwise we can lose focus and chase superfluous ideas that may lead nowhere. We document most of our ideas, which makes it easier for us to revisit them at a later time, when development shifts to focus on polishing the launch build. So, expect a lot of what you see today to change down the line.</p>
+<p><video data-src='https://files.ampersoftware.com/2022/04/08/main_menu.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+</h1></h1></div>
+</section><section id="Improved_Chat">
+<div class="post_section popuppreview">
+<div class="post_section_title">Improved Chat <a href="#Improved_Chat" onclick="CopyText('https://tfsource2.com/post/battleships-balancing-and-blockouts#Improved_Chat')"><i class="mdi mdi-link"></i></a></div>
+<div class="short_post_meta">
+<div class="post_tag"><i class="mdi mdi-account"></i> cheddZy</div>
+</div>
+<p>When redesigning the in-game chat, we mainly wanted to ensure the user experience wasn’t really anything too different from what we know, but still improved, such as the ability to change between sending to global chat and team chat on the fly (after we faced an issue with keybinding as s&box is limited in the amount of keys we may utilize, hence the use of “TAB” to switch between chat modes, see gif below!), as well as selecting a newer yet familiar typeface and improving on visual clarity while typing or reading others’ messages.</p>
+<p>There’s definitely more to come to enhance the communicative experience for TF:S2, but our new chat is a fresh start from the original classic Source 1 chat box.</p>
+<p><video data-src='https://files.ampersoftware.com/2022/04/08/chat.mp4' class='lozad' controls="" muted="" autoplay="" loop="" data-caption=''></video></p>
+</div>
+</section>
+<div>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Battleships, Balancing and Blockouts" data-url="https://tfsource2.com/post/battleships-balancing-and-blockouts" data-hashtags="tfs2" data-show-count="false">Tweet</a>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function CopyText(text) {
+        if (!navigator.clipboard) {
+            fallbackCopyTextToClipboard(text);
+            return;
+        }
+        navigator.clipboard.writeText(text).then(function () {
+            console.log('Async: Copying to clipboard was successful!');
+        }, function (err) {
+            console.error('Async: Could not copy text: ', err);
+        });
+    }
+
+    function fallbackCopyTextToClipboard(text) {
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+
+        // Avoid scrolling to bottom
+        textArea.style.top = "0";
+        textArea.style.left = "0";
+        textArea.style.position = "fixed";
+
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'successful' : 'unsuccessful';
+            console.log('Fallback: Copying text command was ' + msg);
+        } catch (err) {
+            console.error('Fallback: Oops, unable to copy', err);
+        }
+
+        document.body.removeChild(textArea);
+    }
+</script>
+</div>
+<footer>
+<a href="https://twitter.com/AmperSoftware" target="_blank">
+<div class="footer_logotype"><img src="../engine/applications/blog/templates/tfs2/assets/images/amper_logotype.svg?v=79" alt="Amper Software"></div>
+</a>
+<div class="footer_copyright">&copy; 2022 Amper Software. We are not afilliated with Valve.</div>
+<div class="footer_social">
+<a href="https://twitter.com/TeamFortressS2" target="_blank"><i class="mdi mdi-twitter"></i></a>
+<a href="https://discord.gg/tMnTsUsVjP" target="_blank"><i class="mdi mdi-discord"></i></a>
+<a href="https://steamcommunity.com/groups/ampersoftware" target="_blank"><i class="mdi mdi-steam"></i></a>
+</div>
+</footer>
+</div>
+</body>
+<script type="text/javascript">
+	new Parallax({
+		selector: "#background",
+		multiplier: 0.5
+	});
+
+	new PopupPreview({
+		popup: "#popup_preview",
+		container: ".media_container",
+		caption: ".caption_container"
+	});
+</script>
+<script>
+	//
+	// Lozad
+	//
+	const observer = lozad();
+	observer.observe();
+
+	//
+	// AjaxDocLoad
+	//
+	AjaxDocLoad.Register("#site_content");
+
+	AjaxDocLoad.onprechange(() => {
+		document.querySelector("#background").style.opacity = 0;
+	});
+
+	AjaxDocLoad.onpostchange(() => {
+		document.querySelector("#background").style.opacity = 1;
+		observer.observe();
+	});
+</script>
+<script>
+	function Sus() {
+
+		let susUrl = "/engine/applications/blog/templates/tfs2/assets/images/sus.webp?v=79";
+
+		document.querySelector(".banner_title").innerText = "Among";
+		DoMeme(susUrl);
+
+		new Audio("https://cdn.discordapp.com/attachments/843512666060619806/870744310952366150/amogusssusus.wav")
+			.play();
+	}
+
+	function Sap() {
+		DoMeme("https://thumbs.gfycat.com/DismalUnfortunateBurro-size_restricted.gif");
+
+		new Audio("https://cdn.discordapp.com/attachments/843512666060619806/871795497105522818/sapper_plant.wav")
+			.play();
+
+		let sap = new Audio(
+			"https://cdn.discordapp.com/attachments/843512666060619806/871795536792027246/sapper_timer.wav");
+		sap.loop = true;
+		sap.play();
+
+		setTimeout(() => {
+			new Audio("https://wiki.teamfortress.com/w/images/c/cf/Spy_laughevil02.wav").play();
+		}, 300);
+	}
+
+	function DoMeme(img) {
+		for (let el of document.querySelectorAll("*")) {
+
+			if (el.id == "popup_preview") continue;
+
+			if (el.tagName == "IMG") {
+				el.setAttribute("src", img);
+			} else {
+				el.style.backgroundImage =
+					`url(${img})`;
+				el.style.backgroundSize = "contain";
+			}
+		}
+	}
+</script>
+</html>
